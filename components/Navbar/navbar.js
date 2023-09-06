@@ -29,11 +29,11 @@ const NavBar = () => {
           <Link href="/">
             <h1 className={`ml-10 text-gray-700 hover:text-red-600 ${isActive('/') ? 'font-bold text-red-600' : ''}`}>Home</h1>
           </Link>
-          <Link href="/about-me">
-            <h1 className={`ml-10 text-gray-700 hover:text-red-600 ${isActive('/about-me') ? 'font-bold text-red-600' : ''}`}>About Me</h1>
-          </Link>
           <Link href="/work">
             <h1 className={`ml-10 text-gray-700 hover:text-red-600 ${isActive('/work') ? 'font-bold text-red-600' : ''}`}>Work</h1>
+          </Link>
+          <Link href="/about-me">
+            <h1 className={`ml-10 text-gray-700 hover:text-red-600 ${isActive('/about-me') ? 'font-bold text-red-600' : ''}`}>About Me</h1>
           </Link>
           <Link href="/contact">
             <h1 className={`ml-10 text-gray-700 hover:text-red-600 ${isActive('/contact') ? 'font-bold text-red-600' : ''}`}>Contact</h1>
@@ -58,11 +58,11 @@ const NavBar = () => {
               <Link href="/">
                 <h1 onClick={toggleMobileMenu} className={`text-gray-700 ${isActive('/') ? 'font-bold text-red-600' : ''} my-5 text-xl`}>Home</h1>
               </Link>
-              <Link href="/about-me">
-                <h1 onClick={toggleMobileMenu} className={`text-gray-700 ${isActive('/about-me') ? 'font-bold text-red-600' : ''} my-5 text-xl`}>About Me</h1>
-              </Link>
               <Link href="/work">
                 <h1 onClick={toggleMobileMenu} className={`text-gray-700 ${isActive('/work') ? 'font-bold text-red-600' : ''} my-5 text-xl`}>Work</h1>
+              </Link>
+              <Link href="/about-me">
+                <h1 onClick={toggleMobileMenu} className={`text-gray-700 ${isActive('/about-me') ? 'font-bold text-red-600' : ''} my-5 text-xl`}>About Me</h1>
               </Link>
               <Link href="/contact">
                 <h1 onClick={toggleMobileMenu} className={`text-gray-700 ${isActive('/contact') ? 'font-bold text-red-600' : ''} my-5 text-xl`}>Contact</h1>
