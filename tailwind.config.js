@@ -7,7 +7,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'Futura-PT':['futura-pt','sans-serif'],
+        'Futura-PT-Bold':['futura-pt-bold', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
