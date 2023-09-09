@@ -33,6 +33,10 @@ const NavBar = () => {
     setIsWorkSubMenuOpen(true);
   };
 
+  const closeAdditionalLinks = () =>{
+    setAreAdditionalLinksVisible(false);
+  };
+
   const closeWorkSubMenu = () => {
     subMenuTimerRef.current = setTimeout(() => {
       setIsWorkSubMenuOpen(false);
@@ -122,7 +126,7 @@ const NavBar = () => {
           </div>
           <div className='flex flex-col items-center h-full'>
             <Link href="/">
-              <h1 onClick={closeMenus} className={`font-Futura-PT text-gray-700 ${isActive('/') ? 'font-bold text-red-600' : ''} my-5 text-xl`}>Home</h1>
+              <h1 onClick={()=>{closeMenus();closeAdditionalLinks()}} className={`font-Futura-PT text-gray-700 ${isActive('/') ? 'font-bold text-red-600' : ''} my-5 text-xl`}>Home</h1>
             </Link>
             <button onClick={toggleAdditionalLinks}>
               <h1 className={`font-Futura-PT text-gray-700 my-5 text-xl`}>Work v</h1>
@@ -141,7 +145,7 @@ const NavBar = () => {
               </div>
             )}
             <Link href="/about-me">
-              <h1 onClick={closeMenus} className={`font-Futura-PT text-gray-700 ${isActive('/about-me') ? 'font-bold text-red-600' : ''} my-5 text-xl`}>About Me</h1>
+              <h1 onClick={()=>{closeMenus();closeAdditionalLinks()}} className={`font-Futura-PT text-gray-700 ${isActive('/about-me') ? 'font-bold text-red-600' : ''} my-5 text-xl`}>About Me</h1>
             </Link>
             <Link href="/images/Wilson Yu Resume.pdf" target="_blank" rel="noopener noreferrer">
               <h1 className="font-Futura-PT my-5 text-xl text-gray-700 hover:text-red-600">Resume</h1>
