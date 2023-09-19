@@ -96,8 +96,8 @@ const NavBar = () => {
                 <Link href="/dancing-deer">
                   <h1 className={`font-Futura-PT text-gray-700 hover:text-red-600 ${isActive('/dancing-deer') ? 'font-bold text-red-600' : ''}`} onClick={closeSubMenu}>Dancing Deer</h1>
                 </Link>
-                <Link href="/cherrybrook-kitchen">
-                  <h1 className={`font-Futura-PT text-gray-700 hover:text-red-600 ${isActive('/cherrybrook-kitchen') ? 'font-bold text-red-600' : ''}`} onClick={closeSubMenu}>Cherrybrook Kitchen</h1>
+                <Link href="/plastec-ventilation">
+                  <h1 className={`font-Futura-PT text-gray-700 hover:text-red-600 ${isActive('/plastec-ventilation') ? 'font-bold text-red-600' : ''}`} onClick={closeSubMenu}>Plastec Ventilation</h1>
                 </Link>
               </div>
             )}
@@ -139,8 +139,8 @@ const NavBar = () => {
                 <Link href="/dancing-deer">
                   <h1 className={`font-Futura-PT text-gray-700 my-1 text-lg ${isActive('/dancing-deer') ? 'font-bold text-red-600' : ''}`} onClick={closeMenus}>Dancing Deer</h1>
                 </Link>
-                <Link href="/cherrybrook-kitchen">
-                  <h1 className={`font-Futura-PT text-gray-700 my-1 text-lg ${isActive('/cherrybrook-kitchen') ? 'font-bold text-red-600' : ''}`} onClick={closeMenus}>Cherrybrook Kitchen</h1>
+                <Link href="/plastec-ventilation">
+                  <h1 className={`font-Futura-PT text-gray-700 my-1 text-lg ${isActive('/plastec-ventilation') ? 'font-bold text-red-600' : ''}`} onClick={closeMenus}>Plastec Ventilation</h1>
                 </Link>
               </div>
             )}

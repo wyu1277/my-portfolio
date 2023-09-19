@@ -3,7 +3,7 @@ import styles from './page.module.css'
 import heroPattern from 'public/images/heroPattern.png'
 import LWBanner from 'public/images/LeWafBanner.png'
 import DDBanner from 'public/images/DancingDeerBanner.png'
-import CBKBanner from 'public/images/CBKBanner.png'
+import PBanner from 'public/images/PlastecVentilationBanner.png'
 import Link from 'next/link'
 
 export default function Home() {
@@ -26,8 +26,8 @@ export default function Home() {
     <Link href='/dancing-deer'>
     <Image priority src={DDBanner} className='lg:h-[500px] lg:my-5 max-lg:my-2 hover:scale-105 transform transition-transform duration-300 ease-in-out hover:shadow-2xl'/>
     </Link>
-    <Link href='/cherrybrook-kitchen'>
-    <Image priority src={CBKBanner} className='lg:h-[500px] lg:my-5 max-lg:my-2 hover:scale-105 transform transition-transform duration-300 ease-in-out hover:shadow-2xl'/>
+    <Link href='/plastec-ventilation'>
+    <Image priority src={PBanner} className='lg:h-[500px] lg:my-5 max-lg:my-2 hover:scale-105 transform transition-transform duration-300 ease-in-out hover:shadow-2xl'/>
     </Link>
    </div>
    </>
