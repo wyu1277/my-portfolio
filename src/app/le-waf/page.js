@@ -82,15 +82,13 @@ export default function LeWaf() {
 
           <h2 className="font-Futura-PT text-xl font-semibold mt-10 mb-5">Design Solutions</h2>
           <h3 className="font-Futura-PT text-lg">Visual Branding:</h3>
-          <p className="font-Futura-PT mt-5">I crafted a sophisticated and modern visual identity for Le Waf, incorporating a refined color palette that complements their artisanal branding. The logo was redesigned to evoke a sense of handcrafted care, and using</p>
-          <p className="font-Futura-PT mb-5">elegant typography.</p>
+          <p className="font-Futura-PT mt-5">I crafted a sophisticated and modern visual identity for Le Waf, incorporating a refined color palette that complements their artisanal branding. The logo was redesigned to evoke a sense of handcrafted care, and using elegant typography.</p>
           <h3 className="font-Futura-PT text-lg">Homepage:</h3>
           <p className="font-Futura-PT my-5">The homepage features a hero banner showcasing an inviting image of Le Waf's signature waffles. Below the banner, I added a brief narrative about the brand's journey.</p>
           <h3 className="font-Futura-PT text-lg">Product Showcase:</h3>
           <p className="font-Futura-PT my-5">The product pages were designed with large, high-quality images of the waffles, capturing the essence of the artisanal process. Each product listing includes a detailed description of the ingredients and the care taken in crafting the waffles, resonating with the brand's dedication to quality.</p>
           <h3 className="font-Futura-PT text-lg">User-friendly Navigation:</h3>
-          <p className="font-Futura-PT mt-5">I implemented a clear and intuitive navigation system, ensuring visitors can easily explore different waffle flavors, collections, and offers. A persistent cart icon and streamlined checkout process further enhance the</p>
-          <p className="font-Futura-PT mb-5">user experience.</p>
+          <p className="font-Futura-PT mt-5">I implemented a clear and intuitive navigation system, ensuring visitors can easily explore different waffle flavors, collections, and offers. A persistent cart icon and streamlined checkout process further enhance the user experience.</p>
         </div>
         <img src="/images/LWHomepage.png" alt="Le Waf Homepage Design" className="w-7/12 mb-5"/>
         <img src="/images/LWItemPage.png" alt="Le Waf Item Page Design" className="w-7/12 mb-5"/>
