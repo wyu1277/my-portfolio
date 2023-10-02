@@ -99,6 +99,12 @@ const NavBar = () => {
                 <Link href="/plastec-ventilation">
                   <h1 className={`font-Futura-PT text-gray-700 hover:text-red-600 ${isActive('/plastec-ventilation') ? 'font-bold text-red-600' : ''}`} onClick={closeSubMenu}>Plastec Ventilation</h1>
                 </Link>
+                <Link href="/ITFC">
+                  <h1 className={`font-Futura-PT text-gray-700 hover:text-red-600 ${isActive('/ITFC') ? 'font-bold text-red-600' : ''}`} onClick={closeSubMenu}>Its Time For Chelsea</h1>
+                </Link>
+                <Link href="/shop-the-village">
+                  <h1 className={`font-Futura-PT text-gray-700 hover:text-red-600 ${isActive('/shop-the-village') ? 'font-bold text-red-600' : ''}`} onClick={closeSubMenu}>Shop the Village</h1>
+                </Link>
               </div>
             )}
           </div>
@@ -132,15 +138,21 @@ const NavBar = () => {
               <h1 className={`font-Futura-PT text-gray-700 my-5 text-xl`}>Work v</h1>
             </button>
             {areAdditionalLinksVisible && (
-              <div className="flex flex-col justify-center items-center bg-gray-100 w-screen h-40">
+              <div className="flex flex-col justify-center items-center bg-gray-100 w-screen">
                 <Link href="/le-waf">
-                  <h1 className={`font-Futura-PT text-gray-700 my-1 text-lg ${isActive('/le-waf') ? 'font-bold text-red-600' : ''}`} onClick={closeMenus}>Le Waf</h1>
+                  <h1 className={`font-Futura-PT text-gray-700 mb-1 mt-5 text-lg ${isActive('/le-waf') ? 'font-bold text-red-600' : ''}`} onClick={closeMenus}>Le Waf</h1>
                 </Link>
                 <Link href="/dancing-deer">
                   <h1 className={`font-Futura-PT text-gray-700 my-1 text-lg ${isActive('/dancing-deer') ? 'font-bold text-red-600' : ''}`} onClick={closeMenus}>Dancing Deer</h1>
                 </Link>
                 <Link href="/plastec-ventilation">
                   <h1 className={`font-Futura-PT text-gray-700 my-1 text-lg ${isActive('/plastec-ventilation') ? 'font-bold text-red-600' : ''}`} onClick={closeMenus}>Plastec Ventilation</h1>
+                </Link>
+                <Link href="/ITFC">
+                  <h1 className={`font-Futura-PT text-gray-700 my-1 text-lg ${isActive('/ITFC') ? 'font-bold text-red-600' : ''}`} onClick={closeMenus}>Its Time For Chelsea</h1>
+                </Link>
+                <Link href="/shop-the-village">
+                  <h1 className={`font-Futura-PT text-gray-700 mt-1 mb-5 text-lg ${isActive('/shop-the-village') ? 'font-bold text-red-600' : ''}`} onClick={closeMenus}>Shop the Village</h1>
                 </Link>
               </div>
             )}
