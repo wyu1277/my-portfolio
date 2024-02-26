@@ -2,3 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary-color: #dc2626;
+    --secondary-color: #6c757d;
+    /*darker colors*/
+    --red-d-1: #951818;
+
+
+
+    /*spacing*/
+    --space-4xs: clamp(0.33rem, calc(0.13vw + 0.3rem), 0.42rem);
+    --space-3xs: clamp(0.41rem, calc(0.21vw + 0.37rem), 0.55rem);
+    --space-2xs: clamp(0.51rem, calc(0.34vw + 0.45rem), 0.74rem);
+    --space-xs: clamp(0.64rem, calc(0.51vw + 0.54rem), 0.98rem);
+    --space-s: clamp(0.8rem, calc(0.76vw + 0.65rem), 1.31rem);
+    --space-m: clamp(1rem, calc(1.11vw + 0.78rem), 1.75rem);
+    --space-l: clamp(1.25rem, calc(1.6vw + 0.93rem), 2.33rem);
+    --space-xl: clamp(1.56rem, calc(2.29vw + 1.1rem), 3.11rem);
+    --space-2xl: clamp(1.95rem, calc(3.25vw + 1.3rem), 4.14rem);
+    --space-3xl: clamp(2.44rem, calc(4.57vw + 1.53rem), 5.53rem);
+    --space-4xl: clamp(3.05rem, calc(6.39vw + 1.77rem), 7.37rem);
+    --text-xs: clamp(0.64rem, calc(-0.21vw + 0.68rem), 0.5rem);
+    --text-s: clamp(0.8rem, calc(-0.07vw + 0.81rem), 0.75rem);
+    --text-m: clamp(1rem, calc(0.19vw + 0.96rem), 1.13rem);
+    --text-l: clamp(1.25rem, calc(0.65vw + 1.12rem), 1.69rem);
+    --text-xl: clamp(1.56rem, calc(1.44vw + 1.28rem), 2.53rem);
+    --text-2xl: clamp(1.95rem, calc(2.73vw + 1.41rem), 3.8rem);
+    --text-3xl: clamp(2.44rem, calc(4.82vw + 1.48rem), 5.7rem);
+    --text-4xl: clamp(3.05rem, calc(8.14vw + 1.43rem), 8.54rem);
+  }
+  
