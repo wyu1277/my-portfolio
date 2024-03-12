@@ -11,7 +11,7 @@ import { SparklesCore } from '../../components/ui/sparkles'
 export default function Home() {
   return (
    <>
-   <div className='flex justify-center items-center relative bg-red-d-1 lg:h-[900px]'>
+   <div className='flex justify-center items-center relative bg-red-d-1 h-dvh'>
       <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
