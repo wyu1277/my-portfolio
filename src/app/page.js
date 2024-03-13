@@ -32,17 +32,17 @@ export default function Home() {
       </div>
    </div>
     <div className='flex flex-col justify-between items-center p-2xl bg-red-d-1 gap-y-l'>
-      <div className=' w-[1000px]'>
+      <div className='lg:w-[1000px]'>
         <Link href='/le-waf'>
           <Image priority src={LWBanner} className='hover:scale-105 transform transition-transform duration-300 ease-in-out hover:shadow-2xl'/>
         </Link>
       </div>
-      <div className=' w-[1000px]'>
+      <div className='lg:w-[1000px]'>
         <Link href='/dancing-deer'>
           <Image priority src={DDBanner} className='hover:scale-105 transform transition-transform duration-300 ease-in-out hover:shadow-2xl'/>
         </Link>
       </div>
-      <div className=' w-[1000px]'>
+      <div className='lg:w-[1000px]'>
         <Link href='/plastec-ventilation'>
           <Image priority src={PBanner} className='hover:scale-105 transform transition-transform duration-300 ease-in-out hover:shadow-2xl'/>
         </Link>
