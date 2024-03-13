@@ -61,7 +61,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className='flex justify-between items-center bg-white lg:px-[250px] py-[20px] max-lg:px-[20px]'>
+      <nav className='flex justify-between items-center bg-white lg:px-[250px] py-[20px] max-lg:px-[20px] fixed top-0 w-full z-50'>
         <div className='flex'>
           <Link href='/'>
             <Image priority src={whydesignslogo} alt="Logo" className='lg:w-20 max-lg:w-12' />

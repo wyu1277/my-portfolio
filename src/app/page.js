@@ -7,8 +7,23 @@ import PBanner from 'public/images/PlastecVentilationBanner.png'
 import Link from 'next/link'
 import { TextGenerateEffect } from '../../components/ui/text-generate-effect'
 import { SparklesCore } from '../../components/ui/sparkles'
+import { TypewriterEffect } from '../../components/ui/typewriter-effect'
 
 export default function Home() {
+  const words =[
+    {
+      text: "Welcome",
+      className:'font-Futura-PT-Bold text-xl text-center text-white max-md:text-xl max-sm:text-l'
+    },
+    {
+      text: "to",
+      className:'font-Futura-PT-Bold text-xl text-center text-white max-md:text-xl max-sm:text-l'
+    },
+    {
+      text: "WHYDESIGNS!",
+      className:'font-Futura-PT-Bold text-xl text-center text-white max-md:text-xl max-sm:text-l'
+    },
+  ]
   return (
    <>
    <div className='flex justify-center items-center relative bg-red-d-1 h-dvh'>
@@ -26,9 +41,9 @@ export default function Home() {
             words="Hello! I am Wilson, a Product Designer & Developer based in NYC."
             className='font-Futura-PT text-2xl font-extrabold text-white text-center max-md:text-xl max-sm:text-l px-4xl'
           />
-        <TextGenerateEffect words="Welcome to WHYDESIGNS!" 
-        className='font-Futura-PT-Bold text-xl text-center text-white max-md:text-xl max-sm:text-l'
-        />
+        <div className='mt-2xl'> 
+        <TypewriterEffect words= {words}/>
+        </div> 
       </div>
    </div>
     <div className='flex flex-col justify-between items-center p-2xl bg-red-d-1 gap-y-l'>

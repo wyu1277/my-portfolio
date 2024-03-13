@@ -1,11 +1,22 @@
 import Image from 'next/image';
 import profilePic from 'public/images/39021206_10212543031791906_932365596698345472_n.jpg';
+import { TypewriterEffectSmooth } from '../../../components/ui/typewriter-effect';
 
 export default function AboutMe() {
+  const words = [
+    {
+      text: "Why",
+      className:'font-Futura-PT-Bold text-3xl my-10 text-black'
+    },
+    {
+      text: "WhyDesigns?",
+      className:'font-Futura-PT-Bold text-3xl my-10 text-black'
+    },
+  ]
     return (
     <div className='flex flex-col justify-center'>
      <div className="lg:px-[250px] max-lg:px-[20px] mb-20">
-      <h1 className='font-Futura-PT-Bold text-3xl my-10'>Why WhyDesigns?</h1>
+      <TypewriterEffectSmooth words={words}/>
       <p className="font-Futura-PT text-m my-10">I'm a creative designer and a code enthusiast who's on a mission to infuse life into every digital experience. In my world, it's all about answering the "why" behind every design choice. I'm not just a designer; I'm a relentless researcher. I believe that great design stems from solid research, and I weave this philosophy into every project I tackle. Curiosity fuels creativity, and every pixel I place serves a purpose. Whether it's crafting an intuitive user interface or weaving a brand's narrative, I'm all about making every pixel count.</p>
       <p className="font-Futura-PT text-m my-10">
       I'm a self-taught designer and coder, a perpetual student of the ever-evolving realms of UX/UI and product design. I've honed my craft through workshops, devoured blogs, and applied my knowledge to real-world projects, both at work and in my free time. From ideation to development, I'm a big-picture thinker who relishes the journey from concept to creation.
