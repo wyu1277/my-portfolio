@@ -6,11 +6,11 @@ export default function AboutMe() {
   const words = [
     {
       text: "Why",
-      className:'font-Futura-PT-Bold text-3xl my-10 text-black'
+      className:'font-Futura-PT-Bold text-3xl sm:text-2xl text-black'
     },
     {
       text: "WhyDesigns?",
-      className:'font-Futura-PT-Bold text-3xl my-10 text-black'
+      className:'font-Futura-PT-Bold text-3xl sm:text-2xl text-black'
     },
   ]
     return (
