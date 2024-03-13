@@ -115,9 +115,12 @@ export const TypewriterEffectSmooth = ({
         className="overflow-hidden pb-2"
         initial={{
           width: "0%",
+          height: "70px",
         }}
         whileInView={{
           width: "fit-content",
+          display: "flex",
+          alignItems: "center",
         }}
         transition={{
           duration: 2,
