@@ -1,3 +1,11 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
 export default function DD() {
   return (
     <>
@@ -5,7 +13,7 @@ export default function DD() {
     <img src="/images/DDHeroBanner.png" alt="Dancing Deer Hero Banner"/>
     </section>
     <section className="lg:px-[250px] max-lg:px-[20px] py-10 mb-10">
-    <h1 className="font-Futura-PT-Bold text-3xl">Dancing Deer</h1>
+    <h1 className="font-Futura-PT-Bold text-2xl">Dancing Deer</h1>
     <h2 className="font-Futura-PT text-xl font-semibold mb-10">Designing a Family-Friendly Bakery Ecommerce Site</h2>
     <div className="lg:grid lg:grid-flow-col lg:gap-40 justify-center">
       <div>
@@ -22,7 +30,7 @@ export default function DD() {
     <section className="mb-10">
     <div className="flex flex-col lg:px-[250px] py-[20px] max-lg:px-[20px] bg-slate-200">
       <div>
-        <h1 className="font-Futura-PT-Bold text-3xl mt-10">Project Goals</h1>
+        <h1 className="font-Futura-PT-Bold text-2xl mt-10">Project Goals</h1>
         <li className="font-Futura-PT font-semibold mt-5">Redesign the ecommerce website to reflect the warmth and values of Dancing Deer Baking Co.</li>
         <li className="font-Futura-PT font-semibold  mt-5">Create a family-friendly, playful, and visually engaging online platform.</li>
         <li className="font-Futura-PT font-semibold  mt-5">Enhance user experience to facilitate easy navigation and seamless online shopping.</li>
@@ -35,7 +43,7 @@ export default function DD() {
     </div>
     </section>
     <section className="lg:px-[250px] max-lg:px-[20px] py-10 mb-10">
-      <h1 className="font-Futura-PT-Bold text-3xl mb-10">Personas</h1>
+      <h1 className="font-Futura-PT-Bold text-2xl mb-10">Personas</h1>
       <div className="lg:grid lg:grid-flow-col lg:gap-40 justify-center items-center mb-10">
       <div>
         <h3 className="font-Futura-PT uppercase text-gray-500 mb-5">Persona 1: Family-oriented Fiona</h3>
@@ -68,7 +76,7 @@ export default function DD() {
     <section className="mb-10">
     <div className="flex flex-col lg:px-[250px] py-[20px] max-lg:px-[20px] bg-slate-200">
       <div>
-        <h1 className="font-Futura-PT-Bold text-3xl mt-10">Developing the Designs</h1>
+        <h1 className="font-Futura-PT-Bold text-2xl mt-10">Developing the Designs</h1>
         <p className="font-Futura-PT mt-5">The insights gained from the personas guided our design process to ensure that the website resonated with Dancing Deer Baking Co.'s audience. The persona of Family-Oriented Fiona influenced the emphasis on all-natural ingredients and family values throughout the website. Joyful Jerry's persona inspired the playful stick figure illustrations and the focus on creating a joyful and delightful shopping experience. I created my high fidelity mockups in Figma and then imported them into Invision to allow the engineers to inspect the file and export the HTML and CSS code. I worked very closely with the Front End team to spec out any missing interactions that were not covered in the high fidelity mockups.</p>
 
         <h2 className="font-Futura-PT text-xl font-semibold mt-10 mb-5">Design Solutions</h2>
@@ -81,16 +89,32 @@ export default function DD() {
         <h3 className="font-Futura-PT text-lg">User-friendly Navigation:</h3>
         <p className="font-Futura-PT my-5">Fiona's need for convenience and Jerry's desire for simplicity influenced the clear navigation and intuitive layout, allowing easy exploration of categories and products.</p>
       </div>
-      <img src="/images/DDHomepage.png" alt="Dancing Deer Homepage Design" className="w-7/12 mb-5"/>
+      <Carousel 
+        opts={{
+          align: "start",
+        }}
+        className="my-10"
+        >
+        <CarouselContent className="max-sm:h-[530px] h-[930px]">
+          <CarouselItem className="flex justify-center basis-3/4"><img src="/images/DDHomepage.png" alt="Dancing Deer Homepage Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/DDItemPage.png" alt="Dancing Deer Item Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/DDAllRecipePage.png" alt="Dancing Deer All Recipe Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/DDRecipePage.png" alt="Dancing Deer Recipe Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/DDTestimonialPage.png" alt="Dancing Deer Testimonial Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+        </Carousel>
+      {/* <img src="/images/DDHomepage.png" alt="Dancing Deer Homepage Design" className="w-7/12 mb-5"/>
       <img src="/images/DDItemPage.png" alt="Dancing Deer Item Page Design" className="w-7/12 mb-5"/>
       <img src="/images/DDAllRecipePage.png" alt="Dancing Deer All Recipe Page Design" className="w-7/12 mb-5"/>
       <img src="/images/DDRecipePage.png" alt="Dancing Deer Recipe Page Design" className="w-7/12 mb-5"/>
-      <img src="/images/DDTestimonialPage.png" alt="Dancing Deer Testimonial Page Design" className="w-7/12 mb-5"/>
+      <img src="/images/DDTestimonialPage.png" alt="Dancing Deer Testimonial Page Design" className="w-7/12 mb-5"/> */}
     </div>
     </section>
     <section className="mb-10">
       <div className="flex flex-col lg:px-[250px] max-lg:px-[20px]">
-        <h1 className="font-Futura-PT-Bold text-3xl mt-10">Results and Impact</h1>
+        <h1 className="font-Futura-PT-Bold text-2xl mt-10">Results and Impact</h1>
         <p className="font-Futura-PT mt-5">The redesigned Dancing Deer Baking Co. ecommerce site was a harmonious blend of Fiona's health-conscious values and Jerry's joyful spirit. The incorporation of personas led to a more empathetic and tailored design that resonated with the audience. The playful elements and user-centered design increased engagement and contributed to a rise in online orders.</p>
         <p className="font-Futura-PT mt-5">Some key takeaways from this project are:</p>
         <li className="font-Futura-PT mt-5"><strong>Persona-Driven Design.</strong> Incorporating well-defined personas like Family-Oriented Fiona and Joyful Jerry provided invaluable guidance throughout the design process. Future projects should begin with a strong focus on understanding and empathizing with the target audience.</li>

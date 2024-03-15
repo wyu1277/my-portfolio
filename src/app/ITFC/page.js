@@ -2,7 +2,7 @@ export default function ITFC() {
     return (
       <>
       <section className="lg:px-[250px] max-lg:px-[20px] py-10 mb-10">
-      <h1 className="font-Futura-PT-Bold text-3xl">It's Time For Chelsea</h1>
+      <h1 className="font-Futura-PT-Bold text-2xl">It's Time For Chelsea</h1>
       <h2 className="font-Futura-PT text-xl font-semibold mb-10">Boosting Local Businesses Through Unified Campaign</h2>
       <div className="lg:grid lg:grid-flow-col lg:gap-40 justify-center">
         <div>
@@ -19,7 +19,7 @@ export default function ITFC() {
       <section className="mb-10">
       <div className="flex flex-col lg:px-[250px] py-[20px] max-lg:px-[20px] bg-slate-200">
         <div>
-          <h1 className="font-Futura-PT-Bold text-3xl mt-10">Project Goals</h1>
+          <h1 className="font-Futura-PT-Bold text-2xl mt-10">Project Goals</h1>
           <li className="font-Futura-PT font-semibold mt-5">Unified Campaign Identity: To address the lack of awareness and inconsistent messaging, a unified campaign identity was proposed. By aligning "It's Time for Chelsea" with the broader "It's Time for NYC" campaign, a strong, recognizable visual identity would be established, allowing for effective collaboration among businesses.</li>
           <li className="font-Futura-PT font-semibold  mt-5">Strategic Marketing Collaterals: To overcome the digital divide and limited foot traffic, a variety of marketing collaterals were suggested. Instagram posts, ads for the Chelsea Market, LinkNYC kiosks would ensure a multi-channel approach to engage both online and offline audiences.</li>
           <li className="font-Futura-PT font-semibold  mt-5">Localized Content: Customized Instagram posts showcasing the unique offerings of individual businesses were recommended. This approach would enable businesses to spotlight their products or services and encourage customers to explore the area.</li>
@@ -31,7 +31,7 @@ export default function ITFC() {
       </div>
       </section>
       <section className="lg:px-[250px] max-lg:px-[20px] py-10 mb-10">
-        <h1 className="font-Futura-PT-Bold text-3xl mb-10">Deliverables</h1>
+        <h1 className="font-Futura-PT-Bold text-2xl mb-10">Deliverables</h1>
         <div className="mb-10">
         <div>
           <h3 className="font-Futura-PT uppercase text-gray-500 mb-5">ITFC Instagram Posts</h3>
@@ -55,7 +55,7 @@ export default function ITFC() {
         </div>
       </div>
       <div className="flex flex-col">
-          <h1 className="font-Futura-PT-Bold text-3xl mt-10">Results and Impact</h1>
+          <h1 className="font-Futura-PT-Bold text-2xl mt-10">Results and Impact</h1>
           <p className="font-Futura-PT mt-5">The "It's Time for Chelsea" campaign successfully increased awareness and foot traffic to local businesses in the Chelsea area. By leveraging the established "It's Time for NYC" branding and unifying design elements, the campaign achieved a strong visual presence across various platforms. The cohesive design strategy facilitated recognition and recall among the target audience, encouraging engagement and participation.</p>
           <p className="font-Futura-PT mt-5">Some key takeaways from this project are:</p>
           <li className="font-Futura-PT mt-5"><strong>Consistent Branding</strong> Utilizing consistent branding colors and elements across all deliverables is crucial for maintaining a unified campaign identity.</li>

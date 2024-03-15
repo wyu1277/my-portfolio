@@ -1,11 +1,19 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
 export default function LeWaf() {
     return (
       <>
       <section className="mb-10">
-      <img src="/images/LeWafHeroBanner.png" alt="LeWaf Hero Banner"/>
+      <img src="/images/LeWafHeroBanner.png" alt="LeWaf Hero Banner" className="w-full"/>
       </section>
       <section className="lg:px-[250px] max-lg:px-[20px] py-10 mb-10">
-      <h1 className="font-Futura-PT-Bold text-3xl">Le Waf</h1>
+      <h1 className="font-Futura-PT-Bold text-2xl">Le Waf</h1>
       <h2 className="font-Futura-PT text-xl font-semibold mb-10">Redesigning Le Waf's Premium Retail Waffle Ecommerce Site</h2>
       <div className="lg:grid lg:grid-flow-col lg:gap-40 justify-center">
         <div>
@@ -22,7 +30,7 @@ export default function LeWaf() {
       <section className="mb-10">
       <div className="flex flex-col lg:px-[250px] py-[20px] max-lg:px-[20px] bg-slate-200">
         <div>
-          <h1 className="font-Futura-PT-Bold text-3xl mt-10">Project Goals</h1>
+          <h1 className="font-Futura-PT-Bold text-2xl mt-10">Project Goals</h1>
           <li className="font-Futura-PT font-semibold mt-5">Redesign the website to reflect Le Waf's premium branding and artisanal essence.</li>
           <li className="font-Futura-PT font-semibold  mt-5">Create a user-friendly and visually appealing ecommerce platform to boost online sales.</li>
           <li className="font-Futura-PT font-semibold  mt-5">Enhance the overall user experience to align with the brand's reputation for excellence.</li>
@@ -36,7 +44,7 @@ export default function LeWaf() {
       </div>
       </section>
       <section className="lg:px-[250px] max-lg:px-[20px] py-10 mb-10">
-        <h1 className="font-Futura-PT-Bold text-3xl mb-10">Personas</h1>
+        <h1 className="font-Futura-PT-Bold text-2xl mb-10">Personas</h1>
         <div className="lg:grid lg:grid-flow-col lg:gap-40 justify-center items-center mb-10">
         <div>
           <h3 className="font-Futura-PT uppercase text-gray-500 mb-5">Persona 1: Gourmet Grace</h3>
@@ -77,7 +85,7 @@ export default function LeWaf() {
       <section className="mb-10">
       <div className="flex flex-col lg:px-[250px] py-[20px] max-lg:px-[20px] bg-slate-200">
         <div>
-          <h1 className="font-Futura-PT-Bold text-3xl mt-10">Developing the Designs</h1>
+          <h1 className="font-Futura-PT-Bold text-2xl mt-10">Developing the Designs</h1>
           <p className="font-Futura-PT mt-5">I created my high fidelity mockups in Figma and then imported them into Invision to allow the engineers to inspect the file and export the HTML and CSS code. I worked very closely with the Front End team to spec out any missing interactions that were not covered in the high fidelity mockups. I conducted a UX review of each front-end ticket that was implemented to ensure it was aligned with the designs before it went live.</p>
 
           <h2 className="font-Futura-PT text-xl font-semibold mt-10 mb-5">Design Solutions</h2>
@@ -90,16 +98,27 @@ export default function LeWaf() {
           <h3 className="font-Futura-PT text-lg">User-friendly Navigation:</h3>
           <p className="font-Futura-PT my-5">I implemented a clear and intuitive navigation system, ensuring visitors can easily explore different waffle flavors, collections, and offers. A persistent cart icon and streamlined checkout process further enhance the user experience.</p>
         </div>
-        <img src="/images/LWHomepage.png" alt="Le Waf Homepage Design" className="w-7/12 mb-5"/>
-        <img src="/images/LWItemPage.png" alt="Le Waf Item Page Design" className="w-7/12 mb-5"/>
-        <img src="/images/LWCartPage.png" alt="Le Waf Cart Page Design" className="w-7/12 mb-5"/>
-        <img src="/images/LWNewAcc.png" alt="Le Waf New Account Page Design" className="w-7/12 mb-5"/>
-        <img src="/images/LWLogin.png" alt="Le Waf Login Design" className="w-7/12 mb-5"/>
+        <Carousel 
+        opts={{
+          align: "start",
+        }}
+        className="my-10"
+        >
+        <CarouselContent className="max-sm:h-[530px] h-[830px]">
+          <CarouselItem className="flex justify-center basis-3/4"><img src="/images/LWHomepage.png" alt="Le Waf Homepage Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/LWItemPage.png" alt="Le Waf Item Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/LWCartPage.png" alt="Le Waf Cart Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/LWNewAcc.png" alt="Le Waf New Account Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/LWLogin.png" alt="Le Waf Login Design" className="h-min lg:w-7/12"/></CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+        </Carousel>
       </div>
       </section>
       <section className="mb-10">
         <div className="flex flex-col lg:px-[250px] max-lg:px-[20px]">
-          <h1 className="font-Futura-PT-Bold text-3xl mt-10">Results and Impact</h1>
+          <h1 className="font-Futura-PT-Bold text-2xl mt-10">Results and Impact</h1>
           <p className="font-Futura-PT mt-5">The redesigned Le Waf website successfully elevated the brand's online presence and showcased their premium waffles' artisanal essence. The user-friendly interface and engaging storytelling increased visitor engagement and time spent on the site. As a result, Le Waf experienced a notable increase in online sales and received positive feedback from customers.</p>
           <p className="font-Futura-PT mt-5">Some key takeaways from this project are:</p>
           <li className="font-Futura-PT mt-5"><strong>Persona-Centric Design.</strong> Incorporating user personas, such as Gourmet Grace and Busy Ben, was pivotal in crafting a user-centered design that resonated with the target audience. This approach should be a fundamental step in all future projects to ensure alignment with users' needs and preferences.</li>

@@ -1,3 +1,11 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
 export default function PlastecVentilation() {
   return (
     <>
@@ -5,7 +13,7 @@ export default function PlastecVentilation() {
     <img src="/images/PlastecHeroBanner.png" alt="Plastec Ventilation Hero Banner"/>
     </section>
     <section className="lg:px-[250px] max-lg:px-[20px] py-10 mb-10">
-    <h1 className="font-Futura-PT-Bold text-3xl">Plastec Ventilation</h1>
+    <h1 className="font-Futura-PT-Bold text-2xl">Plastec Ventilation</h1>
     <h2 className="font-Futura-PT text-xl font-semibold mb-10">Plastec Ventilation Online Presence Redesign</h2>
     <div className="lg:grid lg:grid-flow-col lg:gap-40 justify-center">
       <div>
@@ -22,7 +30,7 @@ export default function PlastecVentilation() {
     <section className="mb-10">
     <div className="flex flex-col lg:px-[250px] py-[20px] max-lg:px-[20px] bg-slate-200">
       <div>
-        <h1 className="font-Futura-PT-Bold text-3xl mt-10">Project Goals</h1>
+        <h1 className="font-Futura-PT-Bold text-2xl mt-10">Project Goals</h1>
         <li className="font-Futura-PT font-semibold mt-5">Rebrand the website: Create a visually appealing and modern design that reflects Plastec's commitment to innovation and excellence.</li>
         <li className="font-Futura-PT font-semibold  mt-5">Enhance user experience: Improve navigation and overall user experience for visitors seeking corrosion-resistant ventilation solutions.</li>
         <li className="font-Futura-PT font-semibold  mt-5">Highlight core values: Showcase Plastec's core values, including support, reactivity, competitiveness, and innovation.</li>
@@ -34,7 +42,7 @@ export default function PlastecVentilation() {
     </div>
     </section>
     <section className="lg:px-[250px] max-lg:px-[20px] py-10 mb-10">
-      <h1 className="font-Futura-PT-Bold text-3xl mb-10">Personas</h1>
+      <h1 className="font-Futura-PT-Bold text-2xl mb-10">Personas</h1>
       <div className="lg:grid lg:grid-flow-col lg:gap-40 justify-center items-center mb-10">
       <div>
         <h3 className="font-Futura-PT uppercase text-gray-500 mb-5">Persona 1: Engineering Enthusiast Ed</h3>
@@ -67,7 +75,7 @@ export default function PlastecVentilation() {
     <section className="mb-10">
     <div className="flex flex-col lg:px-[250px] py-[20px] max-lg:px-[20px] bg-slate-200">
       <div>
-        <h1 className="font-Futura-PT-Bold text-3xl mt-10">Developing the Designs</h1>
+        <h1 className="font-Futura-PT-Bold text-2xl mt-10">Developing the Designs</h1>
         <p className="font-Futura-PT mt-5">Our design process for the Plastec Ventilation website was underpinned by insights gathered from extensive research and user personas, ensuring that the final design would resonate with our target audience, including Engineering Enthusiast Ed and Sustainability Sarah. I utilized a combination of Figma and Invision and close collaboration with the Front End team to bring our vision to life.</p>
 
         <h2 className="font-Futura-PT text-xl font-semibold mt-10 mb-5">Design Solutions</h2>
@@ -80,15 +88,25 @@ export default function PlastecVentilation() {
         <h3 className="font-Futura-PT text-lg">Core Values Section:</h3>
         <p className="font-Futura-PT my-5">Implemented an intuitive navigation system for easy exploration of products, industries served, and technical resources and ensured responsiveness for a seamless experience across devices.</p>
       </div>
-      <img src="/images/PlastecHomepage.png" alt="Dancing Deer Homepage Design" className="w-7/12 mb-5"/>
+      <Carousel>
+      <CarouselContent className="max-sm:h-[530px] h-[930px]">
+          <CarouselItem className="flex justify-center basis-3/4"><img src="/images/PlastecHomepage.png" alt="Plastec Homepage Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/PlastecItemPage.png" alt="Plastec Item Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/PlastecGeneralApplicationsPage.png" alt="Plastec General Applications Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+          <CarouselItem className="flex justify-center"><img src="/images/PlastecAboutUsPage.png" alt="Plastec About Us Page Design" className="h-min lg:w-7/12"/></CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+      {/* <img src="/images/PlastecHomepage.png" alt="Dancing Deer Homepage Design" className="w-7/12 mb-5"/>
       <img src="/images/PlastecItemPage.png" alt="Dancing Deer Item Page Design" className="w-7/12 mb-5"/>
       <img src="/images/PlastecGeneralApplicationsPage.png" alt="Dancing Deer All Recipe Page Design" className="w-7/12 mb-5"/>
-      <img src="/images/PlastecAboutUsPage.png" alt="Dancing Deer Recipe Page Design" className="w-7/12 mb-5"/>
+      <img src="/images/PlastecAboutUsPage.png" alt="Dancing Deer Recipe Page Design" className="w-7/12 mb-5"/> */}
     </div>
     </section>
     <section className="mb-10">
       <div className="flex flex-col lg:px-[250px] max-lg:px-[20px]">
-        <h1 className="font-Futura-PT-Bold text-3xl mt-10">Results and Impact</h1>
+        <h1 className="font-Futura-PT-Bold text-2xl mt-10">Results and Impact</h1>
         <p className="font-Futura-PT mt-5">The redesigned Plastec Ventilation website successfully conveyed the brand's core values and commitment to innovation and excellence. This transformation led to an improved user experience and navigation, resulting in increased engagement and longer time spent on the site. Clear technical information catered to professionals like Ed, while the deliberate emphasis on sustainability resonated strongly with environmentally conscious users like Sarah.</p>
         <p className="font-Futura-PT mt-5">Some key takeaways from this project are:</p>
         <li className="font-Futura-PT mt-5"><strong>Visual Branding.</strong> A modern and visually appealing design can significantly impact a website's user experience and brand perception.</li>
