@@ -111,8 +111,8 @@ export default function LeWaf() {
           <CarouselItem className="flex justify-center"><img src="/images/LWNewAcc.png" alt="Le Waf New Account Page Design" className="h-min lg:w-7/12"/></CarouselItem>
           <CarouselItem className="flex justify-center"><img src="/images/LWLogin.png" alt="Le Waf Login Design" className="h-min lg:w-7/12"/></CarouselItem>
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="max-lg:hidden" />
+        <CarouselNext className="max-lg:hidden"  />
         </Carousel>
       </div>
       </section>

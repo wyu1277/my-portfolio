@@ -95,13 +95,9 @@ export default function PlastecVentilation() {
           <CarouselItem className="flex justify-center"><img src="/images/PlastecGeneralApplicationsPage.png" alt="Plastec General Applications Page Design" className="h-min lg:w-7/12"/></CarouselItem>
           <CarouselItem className="flex justify-center"><img src="/images/PlastecAboutUsPage.png" alt="Plastec About Us Page Design" className="h-min lg:w-7/12"/></CarouselItem>
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="max-lg:hidden" />
+        <CarouselNext className="max-lg:hidden" />
       </Carousel>
-      {/* <img src="/images/PlastecHomepage.png" alt="Dancing Deer Homepage Design" className="w-7/12 mb-5"/>
-      <img src="/images/PlastecItemPage.png" alt="Dancing Deer Item Page Design" className="w-7/12 mb-5"/>
-      <img src="/images/PlastecGeneralApplicationsPage.png" alt="Dancing Deer All Recipe Page Design" className="w-7/12 mb-5"/>
-      <img src="/images/PlastecAboutUsPage.png" alt="Dancing Deer Recipe Page Design" className="w-7/12 mb-5"/> */}
     </div>
     </section>
     <section className="mb-10">

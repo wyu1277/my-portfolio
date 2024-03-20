@@ -102,14 +102,9 @@ export default function DD() {
           <CarouselItem className="flex justify-center"><img src="/images/DDRecipePage.png" alt="Dancing Deer Recipe Page Design" className="h-min lg:w-7/12"/></CarouselItem>
           <CarouselItem className="flex justify-center"><img src="/images/DDTestimonialPage.png" alt="Dancing Deer Testimonial Page Design" className="h-min lg:w-7/12"/></CarouselItem>
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="max-lg:hidden" />
+        <CarouselNext className="max-lg:hidden" />
         </Carousel>
-      {/* <img src="/images/DDHomepage.png" alt="Dancing Deer Homepage Design" className="w-7/12 mb-5"/>
-      <img src="/images/DDItemPage.png" alt="Dancing Deer Item Page Design" className="w-7/12 mb-5"/>
-      <img src="/images/DDAllRecipePage.png" alt="Dancing Deer All Recipe Page Design" className="w-7/12 mb-5"/>
-      <img src="/images/DDRecipePage.png" alt="Dancing Deer Recipe Page Design" className="w-7/12 mb-5"/>
-      <img src="/images/DDTestimonialPage.png" alt="Dancing Deer Testimonial Page Design" className="w-7/12 mb-5"/> */}
     </div>
     </section>
     <section className="mb-10">
