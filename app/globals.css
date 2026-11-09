@@ -1,26 +1,144 @@
-@import "tailwindcss";
+/* Portfolio design tokens: red and white
+   Drop into src/app/globals.css (or import it there).
+   Replace --red-500 with the exact hex from your logo, then re-check contrast. */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Color: base palette */
+  --white:      #FFFFFF;   /* page background */
+  --soft:       #F6F4F4;   /* quiet panels, footer, image placeholders */
+  --red-500:    #C8102E;   /* brand red: links, active states, key numbers, primary button */
+  --red-700:    #9E0C23;   /* hover/pressed, red text on tints */
+  --red-100:    #FBEAEC;   /* tint behind callouts and selected chips */
+  --ink:        #1E1B1B;   /* body text and headings */
+
+  /* Color: supporting neutrals */
+  --muted:      #5A5555;   /* secondary text (7.3:1 on white) */
+  --line:       #E3DFDF;   /* dividers and card borders */
+  --line-strong:#767070;   /* input and chip outlines (4.9:1 on white) */
+
+  /* Color: roles (use these in components, not the raw values above) */
+  --bg:           var(--white);
+  --bg-subtle:    var(--soft);
+  --text:         var(--ink);
+  --text-muted:   var(--muted);
+  --accent:       var(--red-500);
+  --accent-hover: var(--red-700);
+  --accent-tint:  var(--red-100);
+  --on-accent:    var(--white);
+  --border:       var(--line);
+  --focus-ring:   var(--red-700);
+
+  /* Type: one variable family, loaded with next/font/google (see note below) */
+  --font-sans: var(--font-bricolage), "Helvetica Neue", Helvetica, sans-serif;
+
+  /* Type scale (about 1.25 ratio; fluid between 375px and 1280px) */
+  --text-sm:   0.875rem;                                  /* 14px captions, meta */
+  --text-base: 1rem;                                      /* 16px body */
+  --text-lg:   1.125rem;                                  /* 18px intro text */
+  --text-xl:   clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);    /* card titles */
+  --text-2xl:  clamp(1.5rem, 1.2rem + 1.2vw, 2rem);       /* section headings */
+  --text-3xl:  clamp(2rem, 1.4rem + 2.4vw, 3rem);         /* page titles */
+  --text-4xl:  clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem);     /* home hero */
+
+  --leading-tight: 1.1;    /* large headings */
+  --leading-snug:  1.3;    /* card titles */
+  --leading-body:  1.6;    /* paragraphs */
+  --measure: 65ch;         /* max line length for reading text */
+
+  /* Spacing (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --container: 65rem;      /* 1040px content width, matches the wireframes */
+  --gutter: clamp(1.25rem, 5vw, 7.5rem);
+  --radius-sm: 4px;        /* buttons, inputs */
+  --radius-pill: 999px;    /* filter chips */
+  /* Images and thumbnails stay square-cornered so the work looks uncropped and exact. */
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --duration: 150ms;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Base styles */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); line-height: var(--leading-snug); letter-spacing: -0.01em; }
+
+p { max-width: var(--measure); }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color var(--duration) var(--ease);
+}
+a:hover { color: var(--accent-hover); }
+
+/* Visible keyboard focus on everything interactive */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Minimum 44px touch targets for buttons and chips */
+button, .chip, .button { min-height: 44px; }
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Skip link: lets keyboard and screen reader users jump past the nav */
+.skip-link {
+  position: absolute;
+  left: var(--space-4);
+  top: -100px;
+  z-index: 100;
+  padding: var(--space-3) var(--space-4);
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: var(--radius-sm);
 }
+.skip-link:hover { color: var(--on-accent); }
+.skip-link:focus { top: var(--space-4); }
+
+main:focus { outline: none; }
