@@ -1,0 +1,27 @@
+.band {
+  padding: var(--space-16) clamp(1.25rem, 5vw, 4rem);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  max-width: 66rem;
+  margin: 0 auto;
+}
+.heading { max-width: 35rem; font-size: var(--text-2xl); }
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 var(--space-6);
+  background: var(--white);
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  text-decoration: none;
+}
+.button:hover { color: var(--accent-hover); }

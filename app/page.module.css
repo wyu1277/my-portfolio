@@ -1,0 +1,79 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+  padding: var(--space-16) 0 var(--space-24);
+}
+.eyebrow {
+  margin: 0 0 var(--space-6);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.headline {
+  font-size: var(--text-4xl);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+.headline span { color: var(--accent); }
+.sub { margin: var(--space-6) 0 var(--space-8); color: var(--text-muted); font-size: var(--text-lg); max-width: 31rem; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+.primary, .secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 var(--space-6);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+.primary { background: var(--accent); color: var(--on-accent); font-weight: 500; }
+.primary:hover { background: var(--accent-hover); color: var(--on-accent); }
+.secondary { border: 1px solid var(--line-strong); color: var(--text); }
+.secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+.logoBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1.05;
+  background: var(--accent);
+  box-shadow: 16px 16px 0 var(--ink);
+  margin: 0 16px 16px 0;
+}
+.logo { width: 72%; height: auto; filter: invert(1); }
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-16);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--border);
+}
+
+.also {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  max-width: none;
+  margin: 0 0 var(--space-16);
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.alsoLabel {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; padding-block: var(--space-12) var(--space-16); }
+  .logoBlock { max-width: 24rem; }
+}
