@@ -1,8 +1,9 @@
 title: Dataclay redesign
 byline: Dataclay · UI/UX design
-summary: Product, pricing, and learning pages for a B2B video-automation
-  software company. A product-colored card system, buttons, and shop comparison
-  layouts are still in use.
+summary: >-
+  Product, pricing, and learning pages for a B2B video-automation software
+  company. A product-colored card system, buttons, and shop comparison layouts
+  are still in use.
 category: design
 disciplines:
   - Design
@@ -14,51 +15,55 @@ role: UX Designer and Web Developer
 company: Dataclay
 timeline: Oct 2023 to Oct 2024
 tools: Figma, Bricks Builder
+heroImage: /images/projects/dataclay/heroImage.jpg
 briefText: >-
   Dataclay makes software that automates personalized video production,
-  including Templater, an After Effects plugin. Their site was [a stock
-  WordPress template, confirm].
+  including Templater, an After Effects plugin. Their site was previously a
+  stock Wordpress template.
 
 
   The goal was a clear layout for a large site with four products and many plan
   tiers, serving creatives, developers, and enterprise buyers.
-constraint: The brand identity and color palette were finalized before I
-  started, so my job was layout, organization, and applying the brand across the
-  key pages.
-processIntro: For each page I presented about three layout options to the
-  company's technical lead and iterated on his feedback. He also wrote the code
-  for the interactive elements and implemented some of the more complex layouts.
+constraint: >-
+  The brand identity and color palette were finalized before I started, so my
+  job was layout, organization, and applying the brand across the key pages.
+processIntro: >-
+  For each page I presented about three layout options to the company's
+  technical lead and iterated on his feedback.
 options:
   - label: A
-    note: "[One line on the idea and the tradeoff.]"
+    note: '[One line on the idea and the tradeoff.]'
     chosen: false
   - label: B
-    note: "[One line on the idea and the tradeoff.]"
+    note: '[One line on the idea and the tradeoff.]'
     chosen: true
   - label: C
-    note: "[One line on the idea and the tradeoff.]"
+    note: '[One line on the idea and the tradeoff.]'
     chosen: false
-afterReview: "[One or two specific changes that came from his feedback.]"
+afterReview: '[One or two specific changes that came from his feedback.]'
 decisions:
   - title: Color-coded cards for each product
-    body: Each Dataclay product has a vivid neon brand color, so I gave each card a
+    body: >-
+      Each Dataclay product has a vivid neon brand color, so I gave each card a
       solid colored shadow showing which product it belongs to. [Why this
       solution, and what the earlier options looked like.]
-    imageAlt: ""
   - title: A plan comparison that explains the choice
-    body: The shop page has to help buyers choose among many plan tiers. [How you
+    body: >-
+      The shop page has to help buyers choose among many plan tiers. [How you
       structured the comparison and what you rejected.]
-    imageAlt: ""
-componentsIntro: "[A line on how the buttons and cards were designed to be
-  reused across pages.]"
+componentsIntro: '[A line on how the buttons and cards were designed to be reused across pages.]'
 components:
   - label: Buttons
-    caption: "[Caption]"
+    caption: '[Caption]'
   - label: Cards
-    caption: "[Caption]"
-shippedIntro: The card style, buttons, and shop comparison layouts remain in use
-  on the live site. Other pages have changed since.
-outcomeShipped: The card style, buttons, and the shop and plan comparison
-  layouts are still in use. I built most of the pages in Bricks Builder, and the
-  technical lead added code for the interactive elements.
-outcomeDifferently: "[Your answer.]"
+    caption: '[Caption]'
+shippedIntro: >-
+  The card style, buttons, and shop comparison layouts remain in use on the live
+  site. Other pages have changed since.
+outcomeShipped: >-
+  The card style, buttons, and the shop and plan comparison layouts are still in
+  use. I built most of the pages in Bricks Builder, and the technical lead added
+  code for the interactive elements.
+outcomeDifferently: '[Your answer.]'
+groups: []
+inPlace: []
