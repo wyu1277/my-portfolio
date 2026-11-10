@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ProjectRow from "@/components/work/ProjectRow";
 import ContactBand from "@/components/layout/ContactBand";
+import Reveal from "@/components/ui/Reveal";
 import { featured } from "@/data/projects";
 import styles from "./page.module.css";
 
@@ -41,7 +42,9 @@ export default function Home() {
             <Link href="/work">All work <span aria-hidden="true">&rarr;</span></Link>
           </div>
           {featured.map((p, i) => (
-            <ProjectRow key={p.slug} project={p} number={`0${i + 1}`} flip={i % 2 === 1} />
+            <Reveal key={p.slug}>
+              <ProjectRow project={p} number={`0${i + 1}`} flip={i % 2 === 1} />
+            </Reveal>
           ))}
         </section>
 

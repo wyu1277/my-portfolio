@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { site } from "@/data/site";
 import styles from "./Nav.module.css";
 
 const links = [
@@ -28,8 +28,15 @@ export default function Nav() {
         }
       }}
     >
-      <Link href="/" className={styles.name} onClick={() => setOpen(false)}>
-        {site.name}
+      <Link href="/" className={styles.name} aria-label="Home" onClick={() => setOpen(false)}>
+        <Image
+          src="/wylogo-transparent.png"
+          alt=""
+          width={848}
+          height={750}
+          priority
+          className={styles.logo}
+        />
       </Link>
 
       <button
