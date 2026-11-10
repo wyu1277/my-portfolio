@@ -1,0 +1,54 @@
+title: Making our reviews visible to Google
+byline: Davek Accessories · Systems
+summary: Connected Judge.me reviews to Google and built the review-request flow.
+  Monthly reviews grew from about 9 to about 61.
+category: systems
+disciplines:
+  - Systems
+published: true
+wide: false
+sortOrder: 2
+role: Sole owner, from setup to monitoring
+company: Davek Accessories
+timeline: "[Start month] to present"
+tools: Judge.me, Google Merchant Center, Shopify Flow
+briefText: >-
+  Searching for our flagship umbrella in Google showed almost no reviews, and
+  our ads had no star ratings. The reviews existed, but Google couldn’t see
+  them. Reviews collected through the Shop App were never published to Google,
+  and nothing connected our ratings to Merchant Center or Google Ads.
+
+
+  For a shopper comparing options in search, a missing rating looks like a
+  missing track record.
+constraint: ""
+processIntro: ""
+options: []
+afterReview: ""
+decisions:
+  - title: Connected the reviews to Google
+    body: I set up a product ratings feed from Judge.me to Google Merchant Center
+      and published the existing Shop App reviews, so they would appear on
+      product listings and in ads.
+    imageAlt: ""
+  - title: A steady stream of new reviews
+    body: I created an automated flow in Shopify Flow that sends a review request
+      after an order is fulfilled, so reviews arrive continuously instead of in
+      occasional bursts.
+    imageAlt: ""
+  - title: Keeping an eye on it
+    body: I check incoming reviews weekly and pass low ratings to customer service
+      for private follow-up.
+    imageAlt: ""
+componentsIntro: ""
+components: []
+shippedIntro: ""
+outcomeShipped: Monthly reviews grew from about 9 a month in 2025 to about 61 a
+  month between February and September 2026. The flagship product now shows
+  [251, confirm in Judge.me] reviews at [4.7] in Google, and star ratings appear
+  on every product listing in our ads. The average rating stayed steady (about
+  4.7 before the flow, about 4.8 now), so the problem was visibility and volume,
+  not quality.
+outcomeDifferently: Testing the effect of star ratings on click-through with a
+  clean before and after, and tracking how many shoppers see ratings at each
+  stage of search.

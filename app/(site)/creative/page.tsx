@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import CreativeGallery from "@/components/creative/CreativeGallery";
 import ContactBand from "@/components/layout/ContactBand";
+import { getProjects } from "@/lib/content";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = { title: "Creative" };
 
-export default function CreativePage() {
+export default async function CreativePage() {
+  const campaigns = (await getProjects()).filter(
+    (p) => p.published && p.category === "campaigns",
+  );
   return (
     <>
       <div className="container">
@@ -17,7 +21,7 @@ export default function CreativePage() {
             only a number you can stand behind.]
           </p>
         </header>
-        <CreativeGallery />
+        <CreativeGallery campaigns={campaigns} />
       </div>
       <ContactBand />
     </>

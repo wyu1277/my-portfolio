@@ -1,0 +1,56 @@
+title: Shop the Village
+byline: Chamber of Commerce · Campaign design
+summary: >-
+  A winter shopping campaign for Greenwich Village stores, adapting the
+  Chamber's brand palette to the season across Instagram and kiosk screens.
+category: campaigns
+disciplines:
+  - Campaigns
+published: true
+wide: false
+sortOrder: 2
+role: Graphic Design Intern
+company: Greenwich Village Chelsea Chamber of Commerce
+timeline: '[Dates]'
+tools: Kiosk screens, social
+briefText: >-
+  Shop the Village was a winter shopping campaign for Greenwich Village stores.
+
+
+  I designed Instagram posts and kiosk screens that show the Village's stores in
+  a warm, seasonal mood.
+constraint: >-
+  I started from the Chamber's branding deck and adapted its palette toward
+  deeper, cooler winter tones.
+options: []
+decisions: []
+components: []
+groups:
+  - title: Kiosk screens
+    columns: 1fr 1fr 1fr
+    tiles:
+      - name: Kiosk screen
+        caption: '[Format and size]'
+        ratio: 3 / 4
+      - name: Kiosk screen
+        caption: '[Format and size]'
+        ratio: 3 / 4
+      - name: Kiosk screen
+        caption: '[Format and size]'
+        ratio: 3 / 4
+  - title: Instagram posts
+    columns: 1fr 1fr 1fr
+    tiles:
+      - name: Instagram post
+        caption: '[Store name]'
+        ratio: 1 / 1
+      - name: Instagram post
+        caption: '[Store name]'
+        ratio: 1 / 1
+      - name: Instagram post
+        caption: '[Store name]'
+        ratio: 1 / 1
+inPlace: []
+reflection: >-
+  Adapting an existing palette to a season taught me how far a brand can stretch
+  while still looking like itself.

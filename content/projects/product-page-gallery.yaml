@@ -1,0 +1,59 @@
+title: Product page gallery redesign
+byline: Davek Accessories · Design + development
+summary: Removed about 1,000px of dead space under the product image while
+  keeping the SEO copy, and added hover arrows to browse the whole gallery.
+category: design
+disciplines:
+  - Design
+  - Development
+published: true
+wide: false
+homeOrder: 1
+sortOrder: 2
+role: Designer and developer
+company: Davek Accessories
+timeline: "[Launch date]"
+tools: HTML, CSS, JavaScript, Liquid
+briefText: >-
+  On desktop, the product description is long because it carries SEO copy that
+  has to stay. As shoppers scrolled down to read it, the image was left behind,
+  and roughly 1,000 pixels or more of empty space sat below it.
+
+
+  Switching images was worse. The thumbnails sat at the bottom of a sticky
+  gallery as tall as the viewport, so shoppers had to scroll down to change the
+  image and back up to see it.
+constraint: The SEO copy could not be cut, so the layout had to change instead.
+  Mobile already had these features and no dead space, so this is desktop only.
+processIntro: ""
+options: []
+afterReview: ""
+decisions:
+  - title: Benchmarking before building
+    body: I looked at Blunt and Weatherman as direct competitors and IKEA as a
+      general e-commerce benchmark. [What you took from each, one line apiece.]
+    imageAlt: ""
+  - title: Hover arrows to browse the whole gallery
+    body: Hovering over the product image now shows arrows that step through every
+      image, so shoppers no longer need the thumbnails. This did not exist
+      before. A magnifying-glass cursor signals that the image can be clicked
+      for a larger view.
+    imageAlt: ""
+  - title: No gallery navigation inside the modal
+    body: I tried it, but high-resolution images loaded slowly. The fix would have
+      been loading a low-resolution version first and swapping in the sharp one,
+      and I judged the extra complexity wasn't worth it for a secondary view.
+      The modal shows the chosen image, and the arrows on the page handle
+      browsing.
+    imageAlt: ""
+componentsIntro: ""
+components: []
+shippedIntro: ""
+outcomeShipped: The new gallery is live on all desktop product pages. It removed
+  the dead space and kept the SEO copy. I built and tested it on a backup theme
+  first, then added feedback from coworkers and a review from my boss. I used AI
+  tools to help write the code, and I defined the behavior, tested every
+  iteration in the browser, and directed the fixes.
+outcomeDifferently: I didn't build accessibility into the modal at launch. I
+  added keyboard and screen reader support later, and now it's part of my
+  checklist before anything ships.

@@ -3,10 +3,11 @@ import Link from "next/link";
 import ProjectRow from "@/components/work/ProjectRow";
 import ContactBand from "@/components/layout/ContactBand";
 import Reveal from "@/components/ui/Reveal";
-import { featured } from "@/data/projects";
+import { getFeatured } from "@/lib/content";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default async function Home() {
+  const featured = await getFeatured();
   return (
     <>
       <div className="container">

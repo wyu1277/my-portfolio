@@ -155,4 +155,89 @@ export const caseStudies: Record<string, CaseStudy | undefined> = {
       differently: "I'd now agree on success metrics with the client at the start of a project.",
     },
   },
+    "accessibility-audit": {
+    role: "Sole owner, from audit to documentation",
+    company: "Davek Accessories",
+    timeline: "About two weeks, alongside my regular duties",
+    tools: "WAVE, Lighthouse, NVDA, JavaScript, Liquid",
+    heroLabel: "Hero: WAVE results, before and after",
+    brief: {
+      paragraphs: [
+        "An accessibility audit of our Shopify storefronts turned up problems for people who navigate with a keyboard or a screen reader. Dropdown menus opened by themselves while someone was tabbing through them. Popups appeared without moving focus into them. Product image thumbnails were read aloud as “Image 1, Image 2, Image 3.” Some carousels couldn’t be read reliably.",
+        "These aren’t edge cases. If you can’t operate a menu, a popup, or a cart with a keyboard, you can’t shop the store.",
+      ],
+      constraint:
+        "Our email signup popups come from Klaviyo and our cart upsell comes from a third-party app, so I couldn’t edit their markup. The fixes had to work from the outside.",
+    },
+    decisions: [
+      {
+        title: "Menus that wait to be opened",
+        body: "I rewrote the menu script so that tabbing moves through items without opening dropdowns. Enter or the Down Arrow opens a submenu, and Escape closes it.",
+        imageLabel: "Image: keyboard navigation through the menu",
+      },
+      {
+        title: "Focus that goes where the popup goes",
+        body: "I wrote JavaScript that detects when each Klaviyo popup and the cart dialog appears, moves focus into it, traps focus until it’s closed, closes it with Escape, and returns focus to where the user was. I reused the same logic across all of them.",
+        imageLabel: "Image: focus trap in a popup",
+      },
+      {
+        title: "Three regional sites, three different bugs",
+        body: "The Canada popup nested its heading inside a different element, which broke my first selector. The UK site ran a cookie notice through the same Klaviyo system, and my script attached itself to the wrong popup until I targeted each one by its content.",
+        imageLabel: "Image: the regional popups",
+      },
+      {
+        title: "Images, links, and carousels",
+        body: "I made product thumbnails announce their real alt text, removed duplicate tab stops where an image and title both linked to the same product, gave unclear links descriptive labels, labeled every dialog, and reworked carousel focus handling after finding that Firefox with NVDA behaved differently from Chrome.",
+        imageLabel: "Image: before and after of the product thumbnails",
+      },
+      {
+        title: "Written down so the fixes last",
+        body: "Theme updates and third-party apps can undo fixes, so I wrote a change log and recovery guide covering each one: the issue, the intended behavior, what I changed, where in the theme to look, and the symptoms if it breaks again. I added a regression checklist to run after every theme update.",
+        imageLabel: "Image: the regression checklist",
+      },
+    ],
+    outcome: {
+      shipped:
+        "WAVE errors dropped from 20 to 0 on [page scanned, date], and the AIM score rose from 5.8 to 7.6 out of 10. All fixes shipped across three regional storefronts in about two weeks. [Add one contrast line after you check the 13 flagged items.] Automated results aren’t the same as full compliance, so I treat manual keyboard and screen reader testing as the real check.",
+      differently:
+        "Automating the regression checklist so it runs on each theme update, and adding JAWS and VoiceOver to my testing.",
+    },
+  },
+
+  "reviews-and-google-ratings": {
+    role: "Sole owner, from setup to monitoring",
+    company: "Davek Accessories",
+    timeline: "[Start month] to present",
+    tools: "Judge.me, Google Merchant Center, Shopify Flow",
+    heroLabel: "Hero: before and after Google search results",
+    brief: {
+      paragraphs: [
+        "Searching for our flagship umbrella in Google showed almost no reviews, and our ads had no star ratings. The reviews existed, but Google couldn’t see them. Reviews collected through the Shop App were never published to Google, and nothing connected our ratings to Merchant Center or Google Ads.",
+        "For a shopper comparing options in search, a missing rating looks like a missing track record.",
+      ],
+    },
+    decisions: [
+      {
+        title: "Connected the reviews to Google",
+        body: "I set up a product ratings feed from Judge.me to Google Merchant Center and published the existing Shop App reviews, so they would appear on product listings and in ads.",
+        imageLabel: "Image: the feed from Judge.me to Google",
+      },
+      {
+        title: "A steady stream of new reviews",
+        body: "I created an automated flow in Shopify Flow that sends a review request after an order is fulfilled, so reviews arrive continuously instead of in occasional bursts.",
+        imageLabel: "Image: the review-request email",
+      },
+      {
+        title: "Keeping an eye on it",
+        body: "I check incoming reviews weekly and pass low ratings to customer service for private follow-up.",
+        imageLabel: "Image: the monthly review volume chart",
+      },
+    ],
+    outcome: {
+      shipped:
+        "Monthly reviews grew from about 9 a month in 2025 to about 61 a month between February and September 2026. The flagship product now shows [251, confirm in Judge.me] reviews at [4.7] in Google, and star ratings appear on every product listing in our ads. The average rating stayed steady (about 4.7 before the flow, about 4.8 now), so the problem was visibility and volume, not quality.",
+      differently:
+        "Testing the effect of star ratings on click-through with a clean before and after, and tracking how many shoppers see ratings at each stage of search.",
+    },
+  },
 };

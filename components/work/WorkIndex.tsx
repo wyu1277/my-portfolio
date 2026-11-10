@@ -3,7 +3,7 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import CreativePreview from "./CreativePreview";
-import { projects, type Category, type Discipline } from "@/data/projects";
+import type { Category, Discipline, Project } from "@/data/projects";
 import styles from "./WorkIndex.module.css";
 
 const filters = ["All", "Design", "Development", "Systems", "Campaigns"] as const;
@@ -15,7 +15,7 @@ const sections: { category: Category; title: string; sub: string }[] = [
   { category: "systems", title: "Systems", sub: "The work that keeps a store usable and trusted." },
 ];
 
-export default function WorkIndex() {
+export default function WorkIndex({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState<Filter>("All");
 
   const visible = projects.filter(

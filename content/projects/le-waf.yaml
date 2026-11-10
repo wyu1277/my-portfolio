@@ -1,0 +1,48 @@
+title: Le Waf
+byline: ETL Group · Product design
+summary: A premium redesign for an artisanal waffle brand, from sketches and
+  wireframes to high-fidelity design and front-end handoff.
+category: design
+disciplines:
+  - Design
+published: true
+wide: false
+homeOrder: 3
+sortOrder: 3
+role: Product Designer
+company: ETL Group
+timeline: "[Dates]"
+tools: Figma, InVision
+briefText: >-
+  Le Waf makes artisanal waffles and had gained attention from a Food Network
+  appearance. Their existing site didn't look like the product: it didn't feel
+  premium or show the craft behind it.
+
+
+  They wanted a full redesign that built trust and made buying easy.
+constraint: ""
+processIntro: ""
+options: []
+afterReview: ""
+decisions:
+  - title: Sketch first, polish later
+    body: Sketching showed me that modular sections with generous white space suited
+      a premium product, so I built the layouts around that.
+    imageAlt: ""
+  - title: Photography and story up front
+    body: The homepage opens on a large product image and a short brand story.
+      Product pages use big photography and describe the ingredients and the
+      care behind each waffle.
+    imageAlt: ""
+  - title: Handoff with the engineers
+    body: I imported the designs into InVision so the front-end engineers could
+      inspect them and export CSS, and I worked with them on interactions the
+      mockups didn't cover.
+    imageAlt: ""
+componentsIntro: ""
+components: []
+shippedIntro: ""
+outcomeShipped: Delivered and built by the client's front-end team. Post-launch
+  analytics belonged to the client, so I don't have performance figures to
+  share.
+outcomeDifferently: I'd now agree on success metrics with the client at the start of a project.

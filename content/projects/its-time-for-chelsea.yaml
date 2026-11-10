@@ -1,0 +1,66 @@
+title: It's Time for Chelsea
+byline: Chamber of Commerce · Campaign design
+summary: Instagram posts, Chelsea Market ads, and LinkNYC kiosk ads that ran in
+  Chelsea, built on the citywide It's Time for NYC brand.
+category: campaigns
+disciplines:
+  - Campaigns
+published: true
+wide: false
+sortOrder: 1
+role: Graphic Design Intern
+company: Greenwich Village Chelsea Chamber of Commerce
+timeline: "[Dates]"
+tools: Kiosk, market screens, social
+briefText: >-
+  It's Time for Chelsea was a campaign to bring shoppers to local businesses in
+  Chelsea.
+
+
+  I designed Instagram posts for individual businesses, ads for the screens at
+  Chelsea Market, and ads for LinkNYC kiosks.
+constraint: The campaign was built on the colors and framework of the citywide
+  It's Time for NYC initiative, so the work had to look connected to it.
+groups:
+  - title: Kiosk ads and market screens
+    columns: 1fr 1fr 2fr
+    tiles:
+      - name: Kiosk ad
+        caption: "[Format and size]"
+        ratio: 3 / 4
+        alt: ""
+      - name: Kiosk ad
+        caption: "[Format and size]"
+        ratio: 3 / 4
+        alt: ""
+      - name: Chelsea Market screen
+        caption: "[Format and size]"
+        ratio: 3 / 2
+        alt: ""
+  - title: Instagram posts
+    columns: 1fr 1fr 1fr
+    tiles:
+      - name: Instagram post
+        caption: "[Business name]"
+        ratio: 1 / 1
+        alt: ""
+      - name: Instagram post
+        caption: "[Business name]"
+        ratio: 1 / 1
+        alt: ""
+      - name: Instagram post
+        caption: "[Business name]"
+        ratio: 1 / 1
+        alt: ""
+inPlaceNote: Only use photos you took or have permission to use.
+inPlace:
+  - name: LinkNYC kiosk
+    caption: "[Where and when]"
+    ratio: 4 / 3
+    alt: ""
+  - name: Chelsea Market
+    caption: "[Where and when]"
+    ratio: 4 / 3
+    alt: ""
+reflection: "Designing within an existing brand system is its own skill: the
+  work is making many pieces feel consistent across very different formats."

@@ -54,8 +54,8 @@ export default function CampaignStudy({ project, study, next }: Props) {
           <div key={g.title} className={styles.group}>
             <h3 className={styles.groupTitle}>{g.title}</h3>
             <ul className={styles.tiles} style={{ "--cols": g.columns } as CSSProperties}>
-              {g.tiles.map((t) => (
-                <Tile key={t.label} tile={t} />
+              {g.tiles.map((t, i) => (
+                <Tile key={i} tile={t} />
               ))}
             </ul>
           </div>
@@ -71,8 +71,8 @@ export default function CampaignStudy({ project, study, next }: Props) {
       body: (
         <>
           <ul className={styles.tiles} style={{ "--cols": "1fr 1fr" } as CSSProperties}>
-            {study.inPlace.tiles.map((t) => (
-              <Tile key={t.label} tile={t} />
+            {study.inPlace.tiles.map((t, i) => (
+              <Tile key={i} tile={t} />
             ))}
           </ul>
           <p className={base.text}>{study.inPlace.note}</p>
