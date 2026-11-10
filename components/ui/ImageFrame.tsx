@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ZoomableImage from "./ZoomableImage";
 import styles from "./ImageFrame.module.css";
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
   shadow?: "red" | "ink" | "gray";
   sizes?: string;
   fit?: "natural" | "cover"; // natural = show the whole image, cover = crop to the ratio
+  zoom?: boolean; // natural images open in a modal when clicked
 };
 
 export default function ImageFrame({
@@ -19,11 +21,16 @@ export default function ImageFrame({
   shadow = "red",
   sizes = "(max-width: 800px) 100vw, 60vw",
   fit = "natural",
+  zoom = true,
 }: Props) {
   if (src && fit === "natural") {
     return (
       <div className={`${styles.frame} ${styles.natural} ${styles[shadow]}`}>
-        <Image src={src} alt={alt} width={0} height={0} sizes={sizes} className={styles.naturalImg} />
+        {zoom ? (
+          <ZoomableImage src={src} alt={alt} sizes={sizes} className={styles.naturalImg} />
+        ) : (
+          <Image src={src} alt={alt} width={0} height={0} sizes={sizes} className={styles.naturalImg} />
+        )}
       </div>
     );
   }

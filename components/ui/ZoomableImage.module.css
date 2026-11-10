@@ -1,0 +1,52 @@
+.trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  line-height: 0;
+  cursor: zoom-in;
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: var(--space-8);
+  border: 0;
+  background: rgba(30, 27, 27, 0.94);
+}
+.dialog[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dialog::backdrop { background: transparent; }
+.dialog :focus-visible { outline-color: var(--white); }
+
+.big {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: zoom-out;
+}
+
+.close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  min-height: 44px;
+  padding: 0 var(--space-6);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.close:hover { background: var(--accent-tint); }

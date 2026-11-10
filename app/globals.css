@@ -142,3 +142,5 @@ img, video { max-width: 100%; height: auto; display: block; }
 .skip-link:focus { top: var(--space-4); }
 
 main:focus { outline: none; }
+
+body:has(dialog[open]) { overflow: hidden; }

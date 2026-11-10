@@ -11,7 +11,7 @@ wide: false
 sortOrder: 2
 role: Graphic Design Intern
 company: Greenwich Village Chelsea Chamber of Commerce
-timeline: '[Dates]'
+timeline: Nov 2021 - Dec 2021
 tools: Kiosk screens, social
 heroImage: /images/projects/shop-the-village/heroImage.png
 briefText: >-
@@ -33,24 +33,30 @@ groups:
       - name: Kiosk screen
         caption: '[Format and size]'
         ratio: 3 / 4
+        image: /images/projects/shop-the-village/groups/0/tiles/0/image.jpg
       - name: Kiosk screen
         caption: '[Format and size]'
         ratio: 3 / 4
+        image: /images/projects/shop-the-village/groups/0/tiles/1/image.jpg
       - name: Kiosk screen
         caption: '[Format and size]'
         ratio: 3 / 4
+        image: /images/projects/shop-the-village/groups/0/tiles/2/image.jpg
   - title: Instagram posts
     columns: 1fr 1fr 1fr
     tiles:
       - name: Instagram post
         caption: '[Store name]'
         ratio: 1 / 1
+        image: /images/projects/shop-the-village/groups/1/tiles/0/image.png
       - name: Instagram post
         caption: '[Store name]'
         ratio: 1 / 1
+        image: /images/projects/shop-the-village/groups/1/tiles/1/image.png
       - name: Instagram post
         caption: '[Store name]'
         ratio: 1 / 1
+        image: /images/projects/shop-the-village/groups/1/tiles/2/image.png
 inPlace: []
 reflection: >-
   Adapting an existing palette to a season taught me how far a brand can stretch
