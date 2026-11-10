@@ -81,7 +81,7 @@ export const projects: Project[] = [
     placeholder: "Thumbnail: WAVE before and after",
     category: "systems",
     disciplines: ["Development", "Systems"],
-    published: false, // waiting on approval
+    published: true,
   },
   {
     slug: "reviews-and-google-ratings",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     placeholder: "Thumbnail: review volume chart",
     category: "systems",
     disciplines: ["Systems"],
-    published: false, // flip to true when ready
+    published: true, 
   },
 ];
 

@@ -1,0 +1,76 @@
+.header { padding: var(--space-16) 0 var(--space-12); }
+.back { display: inline-block; margin-bottom: var(--space-8); font-size: var(--text-sm); text-decoration: none; }
+.category {
+  margin: 0 0 var(--space-4);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.title { max-width: 56rem; font-size: clamp(2.5rem, 1.4rem + 4.4vw, 5rem); letter-spacing: -0.04em; line-height: 1; }
+.summary { max-width: 38rem; margin: var(--space-6) 0 var(--space-8); color: var(--text-muted); font-size: var(--text-lg); }
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+  margin: 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border);
+}
+.meta dt { margin-bottom: var(--space-1); color: var(--text-muted); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.meta dd { margin: 0; font-size: var(--text-sm); }
+
+.sections { margin-top: var(--space-16); }
+.section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-16);
+  padding: var(--space-16) 0;
+  border-top: 1px solid var(--border);
+}
+.num { margin: 0; color: var(--accent); font-size: 3.5rem; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+.sectionTitle { margin-top: var(--space-3); font-size: var(--text-xl); }
+.note { margin: var(--space-2) 0 0; color: var(--text-muted); font-size: var(--text-sm); }
+
+.text { margin: 0 0 var(--space-4); max-width: 36rem; color: var(--text-muted); }
+.text strong { color: var(--text); }
+
+.constraint { max-width: 36rem; margin-top: var(--space-6); padding: var(--space-5, 1.25rem) var(--space-6); background: var(--accent-tint); }
+.constraint p { margin: 0; }
+.constraintLabel { margin-bottom: var(--space-2) !important; color: var(--red-700); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.options, .tiles { display: grid; gap: var(--space-8); margin: var(--space-8) 0; padding: 0; list-style: none; }
+.options { grid-template-columns: repeat(3, 1fr); }
+.tiles { grid-template-columns: repeat(2, 1fr); }
+.optName { margin: var(--space-4) 0 0; font-weight: 700; font-size: var(--text-sm); }
+.optNote { margin: 0; color: var(--text-muted); font-size: var(--text-sm); }
+.chosen { margin-left: var(--space-2); padding: 2px var(--space-3); background: var(--accent-tint); color: var(--red-700); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.decision { display: grid; grid-template-columns: 6fr 5fr; gap: var(--space-12); align-items: center; margin-bottom: var(--space-16); }
+.flip { grid-template-columns: 5fr 6fr; }
+.flip .decisionMedia { order: 2; }
+.eyebrow { margin: 0 0 var(--space-2); color: var(--text-muted); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.decisionTitle { margin-bottom: var(--space-4); font-size: var(--text-2xl); }
+
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); margin-top: var(--space-8); }
+.pair figure { margin: 0; }
+
+.outcome { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); }
+.outcomeHead { margin-bottom: var(--space-3); font-size: var(--text-xl); }
+
+.next { display: block; padding: var(--space-16) clamp(1.25rem, 5vw, 4rem); background: var(--accent); color: var(--on-accent); text-decoration: none; }
+.next:hover { background: var(--accent-hover); color: var(--on-accent); }
+.nextInner { display: flex; align-items: center; justify-content: space-between; max-width: 66rem; margin: 0 auto; }
+.nextLabel { display: block; margin-bottom: var(--space-2); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.nextTitle { display: block; font-size: clamp(2rem, 1.2rem + 2.6vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+.nextArrow { font-size: 3rem; }
+
+@media (max-width: 800px) {
+  .meta { grid-template-columns: 1fr 1fr; }
+  .section { grid-template-columns: 1fr; gap: var(--space-6); }
+  .options, .tiles, .pair, .outcome { grid-template-columns: 1fr; }
+  .decision, .flip { grid-template-columns: 1fr; gap: var(--space-6); }
+  .flip .decisionMedia { order: 0; }
+}
