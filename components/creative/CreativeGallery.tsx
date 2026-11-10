@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { CSSProperties } from "react";
 import ImageFrame from "@/components/ui/ImageFrame";
 import ProjectCard from "@/components/work/ProjectCard";
-import { creativeItems, type CreativeItem, type Group } from "@/data/creative";
+import type { CreativeItem, Group } from "@/data/creative";
 import type { Project } from "@/data/projects";
 import styles from "./CreativeGallery.module.css";
 
@@ -57,14 +57,20 @@ function Media({ item, shadow }: { item: CreativeItem; shadow: "red" | "ink" | "
   );
 }
 
-export default function CreativeGallery({ campaigns }: { campaigns: Project[] }) {
+export default function CreativeGallery({
+  items: allItems,
+  campaigns,
+}: {
+  items: CreativeItem[];
+  campaigns: Project[];
+}) {
   const [filter, setFilter] = useState<Filter>("All");
 
   const visible = sections
     .filter((s) => filter === "All" || filterFor[s.key] === filter)
     .map((s) => ({
       ...s,
-      items: s.key === "campaigns" ? [] : creativeItems.filter((i) => i.group === s.key),
+      items: s.key === "campaigns" ? [] : allItems.filter((i) => i.group === s.key),
     }))
     .filter((s) => (s.key === "campaigns" ? campaigns.length > 0 : s.items.length > 0));
 

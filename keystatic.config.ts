@@ -1,4 +1,4 @@
-import { config, fields, collection } from "@keystatic/core";
+import { config, fields, collection, singleton } from "@keystatic/core";
 
 const photo = (label: string) =>
   fields.image({
@@ -36,7 +36,95 @@ const tiles = (label: string) =>
 export default config({
   storage: { kind: "local" },
 
+    singletons: {
+    creativePage: singleton({
+      label: "Creative page",
+      path: "content/creative-page",
+      schema: {
+        intro: fields.text({
+          label: "Intro paragraph",
+          multiline: true,
+          description: "Shown under the page title. Only use numbers you can stand behind.",
+        }),
+      },
+    }),
+  },
+
   collections: {
+        creative: collection({
+      label: "Creative items",
+      slugField: "title",
+      path: "content/creative/*",
+      schema: {
+        title: fields.slug({
+          name: { label: "Name", description: "Shown under the tile, e.g. the campaign name." },
+        }),
+        group: fields.select({
+          label: "Type",
+          options: [
+            { label: "Email", value: "email" },
+            { label: "Video ad", value: "video" },
+            { label: "Site hero", value: "hero" },
+            { label: "Functional graphic (large feature)", value: "graphic" },
+          ],
+          defaultValue: "email",
+        }),
+        meta: fields.text({
+          label: "Small line under the name",
+          description: "e.g. Email, Klaviyo or Video ad, 12 seconds, captioned",
+        }),
+        ratio: fields.select({
+          label: "Placeholder shape",
+          description: "Only used while there is no image or video. Uploaded images show at their natural shape.",
+          options: [
+            { label: "Tall (3:4)", value: "3 / 4" },
+            { label: "Vertical video (9:16)", value: "9 / 16" },
+            { label: "Square (1:1)", value: "1 / 1" },
+            { label: "Landscape (4:3)", value: "4 / 3" },
+            { label: "Widescreen (16:9)", value: "16 / 9" },
+          ],
+          defaultValue: "3 / 4",
+        }),
+        image: fields.image({
+          label: "Image",
+          description: "Emails, heroes, and graphics. Compress to under about 500 KB.",
+          directory: "public/images/creative",
+          publicPath: "/images/creative/",
+        }),
+        alt: fields.text({
+          label: "Image description",
+          description: "Describe what the image shows, for screen readers.",
+        }),
+        video: fields.file({
+          label: "Video (MP4)",
+          description: "Short clips only, ideally under 5 MB.",
+          directory: "public/videos",
+          publicPath: "/videos/",
+        }),
+        poster: fields.image({
+          label: "Video poster image",
+          description: "A still shown before the video plays.",
+          directory: "public/images/creative",
+          publicPath: "/images/creative/",
+        }),
+        captions: fields.file({
+          label: "Captions file (.vtt)",
+          description: "Captions for the video.",
+          directory: "public/videos",
+          publicPath: "/videos/",
+        }),
+        note: fields.text({
+          label: "Longer text",
+          multiline: true,
+          description: "Used for functional graphics, such as the sizing chart.",
+        }),
+        published: fields.checkbox({ label: "Published", defaultValue: true }),
+        sortOrder: fields.integer({
+          label: "Sort order",
+          description: "Lower numbers come first within a type.",
+        }),
+      },
+    }),
     projects: collection({
       label: "Projects",
       slugField: "title",
