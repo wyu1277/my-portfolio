@@ -15,6 +15,7 @@ export default function ProjectRow({ project, number, flip = false }: Props) {
           alt=""
           label={project.placeholder}
           ratio="7 / 5"
+          fit="cover"
         />
       </Link>
       <div className={styles.text}>

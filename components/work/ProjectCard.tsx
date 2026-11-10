@@ -22,6 +22,7 @@ export default function ProjectCard({
           label={project.placeholder}
           ratio={wide ? "7 / 5" : "4 / 3"}
           shadow={shadowFor[project.category]}
+          fit="cover"
         />
       </Link>
       <div>

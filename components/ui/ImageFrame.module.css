@@ -15,3 +15,13 @@
 .ink  { box-shadow: 14px 14px 0 var(--ink); }
 .gray { box-shadow: 14px 14px 0 var(--line-strong); }
 .img  { object-fit: cover; }
+.natural {
+  display: block;
+  padding: 0;
+  background: none;
+}
+.naturalImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
