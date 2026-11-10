@@ -1,0 +1,19 @@
+.group { margin-bottom: var(--space-12); }
+.groupTitle { margin-bottom: var(--space-6); font-size: var(--text-xl); }
+
+.tiles {
+  display: grid;
+  grid-template-columns: var(--cols, 1fr);
+  gap: var(--space-8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: start;
+}
+
+.tileName { margin: var(--space-4) 0 0; font-size: var(--text-sm); font-weight: 700; }
+.tileCaption { margin: 0; color: var(--text-muted); font-size: var(--text-sm); }
+
+@media (max-width: 800px) {
+  .tiles { grid-template-columns: 1fr; }
+}
