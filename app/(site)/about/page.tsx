@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ImageFrame from "@/components/ui/ImageFrame";
 import ContactBand from "@/components/layout/ContactBand";
-import { site } from "@/data/site";
 import { getAbout } from "@/lib/about";
+import { getSite } from "@/lib/site";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = { title: "About" };
 
 export default async function AboutPage() {
-  const about = await getAbout();
+  const [about, site] = await Promise.all([getAbout(), getSite()]);
   const paragraphs = about.body
     .split(/\n\s*\n/)
     .map((p) => p.trim())
@@ -26,10 +26,17 @@ export default async function AboutPage() {
               <p key={i} className={styles.body}>{p}</p>
             ))}
             <div className={styles.actions}>
-              <a href={site.resume} className={styles.primary} download>
-                Download resume (PDF)
-              </a>
-              <Link href="/contact" className={styles.secondary}>Get in touch</Link>
+              {site.resume && (
+                <a href={site.resume} className={styles.primary} download>
+                  Download resume (PDF)
+                </a>
+              )}
+              <Link
+                href="/contact"
+                className={site.resume ? styles.secondary : styles.primary}
+              >
+                Get in touch
+              </Link>
             </div>
           </div>
           <ImageFrame

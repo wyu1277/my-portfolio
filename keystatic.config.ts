@@ -48,7 +48,7 @@ export default config({
         }),
       },
     }),
-        aboutPage: singleton({
+    aboutPage: singleton({
       label: "About page",
       path: "content/about-page",
       schema: {
@@ -75,6 +75,25 @@ export default config({
         portraitAlt: fields.text({
           label: "Portrait description",
           description: "Describe the photo for screen readers.",
+        }),
+      },
+    }),
+    siteSettings: singleton({
+      label: "Site settings",
+      path: "content/site-settings",
+      schema: {
+        name: fields.text({ label: "Your name", description: "Shown in the footer." }),
+        email: fields.text({ label: "Email", description: "Used for the contact button and email links." }),
+        linkedin: fields.url({
+          label: "LinkedIn URL",
+          description: "Leave empty to hide the LinkedIn link.",
+        }),
+        location: fields.text({ label: "Location", description: "e.g. New York" }),
+        resume: fields.file({
+          label: "Resume (PDF)",
+          description: "Leave empty to hide every Resume link. Upload the corrected version.",
+          directory: "public/files",
+          publicPath: "/files/",
         }),
       },
     }),

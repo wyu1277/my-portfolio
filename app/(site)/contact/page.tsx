@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { site } from "@/data/site";
+import { getSite } from "@/lib/site";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = { title: "Contact" };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const site = await getSite();
   return (
     <div className="container">
       <section className={styles.wrap}>
@@ -12,12 +13,14 @@ export default function ContactPage() {
         <p className={styles.intro}>
           Have a role or project in mind? The quickest way to reach me is by email.
         </p>
-        <a href={`mailto:${site.email}`} className={styles.email}>{site.email}</a>
+        {site.email && (
+          <a href={`mailto:${site.email}`} className={styles.email}>{site.email}</a>
+        )}
         <ul className={styles.links}>
-          <li><a href={site.linkedin}>LinkedIn</a></li>
-          <li><a href={site.resume} download>Resume (PDF)</a></li>
+          {site.linkedin && <li><a href={site.linkedin}>LinkedIn</a></li>}
+          {site.resume && <li><a href={site.resume} download>Resume (PDF)</a></li>}
         </ul>
-        <p className={styles.location}>Based in {site.location}.</p>
+        {site.location && <p className={styles.location}>Based in {site.location}.</p>}
       </section>
     </div>
   );
