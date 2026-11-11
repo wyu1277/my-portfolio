@@ -48,6 +48,36 @@ export default config({
         }),
       },
     }),
+        aboutPage: singleton({
+      label: "About page",
+      path: "content/about-page",
+      schema: {
+        lead: fields.text({
+          label: "Lead line",
+          multiline: true,
+          description: "The large sentence at the top of the page.",
+        }),
+        body: fields.text({
+          label: "Paragraph",
+          multiline: true,
+          description: "Leave a blank line between paragraphs.",
+        }),
+        tools: fields.text({
+          label: "Tools line",
+          description: "A comma-separated list shown at the bottom.",
+        }),
+        portrait: fields.image({
+          label: "Portrait",
+          description: "A photo of you or you working. Compress to under about 500 KB.",
+          directory: "public/images/about",
+          publicPath: "/images/about/",
+        }),
+        portraitAlt: fields.text({
+          label: "Portrait description",
+          description: "Describe the photo for screen readers.",
+        }),
+      },
+    }),
   },
 
   collections: {

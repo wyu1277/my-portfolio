@@ -12,7 +12,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: { default: `${site.name}: Designer + front-end developer`, template: `%s | ${site.name}` },
+  title: { default: "WHYDesigns: Designer + front-end developer", template: "%s | WHYDesigns" },
   description: "Digital design with a reason behind every choice.",
   // Remove this line when you are ready to launch, so search engines can index the site.
   robots: { index: false, follow: false },
