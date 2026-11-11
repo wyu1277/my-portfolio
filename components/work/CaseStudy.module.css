@@ -74,3 +74,21 @@
   .decision, .flip { grid-template-columns: 1fr; gap: var(--space-6); }
   .flip .decisionMedia { order: 0; }
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12) var(--space-8);
+  margin: var(--space-8) 0 0;
+  padding: 0;
+  list-style: none;
+  align-items: start;
+}
+.galleryWide { grid-column: 1 / -1; }
+
+.compare { margin-top: var(--space-12); }
+.compareTitle { margin-bottom: var(--space-4); font-size: var(--text-xl); }
+
+@media (max-width: 800px) {
+  .gallery { grid-template-columns: 1fr; }
+}

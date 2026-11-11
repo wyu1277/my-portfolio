@@ -60,6 +60,8 @@ components:
 shippedIntro: >-
   The card style, buttons, and shop comparison layouts remain in use on the live
   site. Other pages have changed since.
+gallery: []
+comparisons: []
 outcomeShipped: >-
   The card style, buttons, and the shop and plan comparison layouts are still in
   use. I built most of the pages in Bricks Builder, and the technical lead added

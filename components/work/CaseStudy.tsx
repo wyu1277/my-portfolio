@@ -90,7 +90,32 @@ export default function CaseStudy({ project, study, next }: Props) {
       ),
     });
   }
-
+  if (study.gallery) {
+    sections.push({
+      title: "The designs",
+      note: "A selection of pages",
+      body: (
+        <>
+          {study.galleryIntro && <p className={styles.text}>{study.galleryIntro}</p>}
+          <ul className={styles.gallery}>
+            {study.gallery.map((g, i) => (
+              <li key={i} className={g.wide ? styles.galleryWide : undefined}>
+                <ImageFrame
+                  src={g.image}
+                  alt={g.alt ?? ""}
+                  label={g.title || "Page"}
+                  ratio="4 / 3"
+                  sizes={g.wide ? "(max-width: 800px) 100vw, 70vw" : "(max-width: 800px) 100vw, 35vw"}
+                />
+                {g.title && <p className={styles.optName}>{g.title}</p>}
+                {g.caption && <p className={styles.optNote}>{g.caption}</p>}
+              </li>
+            ))}
+          </ul>
+        </>
+      ),
+    });
+  }
   if (study.components) {
     sections.push({
       title: "Components",
@@ -117,17 +142,23 @@ export default function CaseStudy({ project, study, next }: Props) {
       title: "Shipped vs. designed",
       body: (
         <>
-          <p className={styles.text}>{s.intro}</p>
-          <div className={styles.pair}>
-            <figure>
-              <ImageFrame src={s.designImage} alt="" label={s.designLabel} ratio="4 / 3" shadow="gray" sizes="(max-width: 800px) 100vw, 40vw" />
-              <figcaption className={styles.optName}>{s.designLabel}</figcaption>
-            </figure>
-            <figure>
-              <ImageFrame src={s.liveImage} alt="" label={s.liveLabel} ratio="4 / 3" sizes="(max-width: 800px) 100vw, 40vw" />
-              <figcaption className={styles.optName}>{s.liveLabel}</figcaption>
-            </figure>
-          </div>
+          {s.intro && <p className={styles.text}>{s.intro}</p>}
+          {s.pairs.map((p, i) => (
+            <div key={i} className={styles.compare}>
+              {p.label && <h3 className={styles.compareTitle}>{p.label}</h3>}
+              <div className={styles.pair}>
+                <figure>
+                  <ImageFrame src={p.designImage} alt={p.designAlt ?? ""} label="My design file" ratio="4 / 3" shadow="gray" sizes="(max-width: 800px) 100vw, 40vw" />
+                  <figcaption className={styles.optName}>My design file</figcaption>
+                </figure>
+                <figure>
+                  <ImageFrame src={p.liveImage} alt={p.liveAlt ?? ""} label="Live site today" ratio="4 / 3" sizes="(max-width: 800px) 100vw, 40vw" />
+                  <figcaption className={styles.optName}>Live site today</figcaption>
+                </figure>
+              </div>
+              {p.caption && <p className={styles.text}>{p.caption}</p>}
+            </div>
+          ))}
         </>
       ),
     });

@@ -3,7 +3,7 @@ import path from "node:path";
 import { createReader } from "@keystatic/core/reader";
 import config from "@/keystatic.config";
 import type { Category, Discipline, Project } from "@/data/projects";
-import type { CaseStudy } from "@/data/case-studies";
+import type { CaseStudy, ComparisonPair } from "@/data/case-studies";
 import type { CampaignStudy } from "@/data/campaigns";
 
 const reader = createReader(process.cwd(), config);
@@ -89,6 +89,24 @@ export async function getStudy(slug: string): Promise<StudyResult | null> {
     return { kind: "campaign", study };
   }
 
+  // Shipped vs. designed: a list of comparisons. The older single pair still works.
+  const pairs: ComparisonPair[] = e.comparisons.map((c) => ({
+    label: c.label,
+    caption: c.caption,
+    designImage: imageSrc(slug, c.designImage),
+    designAlt: c.designAlt || undefined,
+    liveImage: imageSrc(slug, c.liveImage),
+    liveAlt: c.liveAlt || undefined,
+  }));
+  if (pairs.length === 0 && (e.designImage || e.liveImage)) {
+    pairs.push({
+      label: "",
+      caption: "",
+      designImage: imageSrc(slug, e.designImage),
+      liveImage: imageSrc(slug, e.liveImage),
+    });
+  }
+
   const study: CaseStudy = {
     role: e.role,
     company: e.company,
@@ -121,6 +139,17 @@ export async function getStudy(slug: string): Promise<StudyResult | null> {
             imageAlt: d.imageAlt || undefined,
           }))
         : undefined,
+    galleryIntro: e.galleryIntro || undefined,
+    gallery:
+      e.gallery.length > 0
+        ? e.gallery.map((g) => ({
+            title: g.title,
+            caption: g.caption,
+            wide: g.size === "full",
+            image: imageSrc(slug, g.image),
+            alt: g.alt || undefined,
+          }))
+        : undefined,
     components:
       e.components.length > 0
         ? {
@@ -133,15 +162,7 @@ export async function getStudy(slug: string): Promise<StudyResult | null> {
           }
         : undefined,
     shippedVsDesigned:
-      e.shippedIntro || e.designImage || e.liveImage
-        ? {
-            intro: e.shippedIntro,
-            designLabel: "My design file",
-            liveLabel: "Live site today",
-            designImage: imageSrc(slug, e.designImage),
-            liveImage: imageSrc(slug, e.liveImage),
-          }
-        : undefined,
+      pairs.length > 0 || e.shippedIntro ? { intro: e.shippedIntro, pairs } : undefined,
     outcome: { shipped: e.outcomeShipped, differently: e.outcomeDifferently },
   };
   return { kind: "case", study };

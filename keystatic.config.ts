@@ -307,6 +307,41 @@ export default config({
           { label: "Case study · Components", itemLabel: (p) => p.fields.label.value || "Component" },
         ),
         shippedIntro: fields.text({ label: "Case study · Shipped vs. designed intro", multiline: true }),
+        galleryIntro: fields.text({ label: "Case study · The designs: intro", multiline: true }),
+        gallery: fields.array(
+          fields.object({
+            title: fields.text({ label: "Page name", description: "e.g. Homepage" }),
+            caption: fields.text({ label: "What this page solves", multiline: true }),
+            size: fields.select({
+              label: "Size",
+              options: [
+                { label: "Half width", value: "half" },
+                { label: "Full width", value: "full" },
+              ],
+              defaultValue: "half",
+            }),
+            image: photo("Image"),
+            alt: fields.text({ label: "Image description", description: "For screen readers." }),
+          }),
+          {
+            label: "Case study · The designs (curated gallery)",
+            itemLabel: (p) => p.fields.title.value || "Page",
+          },
+        ),
+        comparisons: fields.array(
+          fields.object({
+            label: fields.text({ label: "What is being compared", description: "e.g. Shop page" }),
+            caption: fields.text({ label: "What matches and what changed", multiline: true }),
+            designImage: photo("My design file"),
+            designAlt: fields.text({ label: "Design file description" }),
+            liveImage: photo("Live site today"),
+            liveAlt: fields.text({ label: "Live site description" }),
+          }),
+          {
+            label: "Case study · Shipped vs. designed: comparisons",
+            itemLabel: (p) => p.fields.label.value || "Comparison",
+          },
+        ),
         designImage: photo("Case study · Shipped vs. designed: my design file"),
         liveImage: photo("Case study · Shipped vs. designed: live site"),
         outcomeShipped: fields.text({ label: "Case study · What shipped", multiline: true }),
