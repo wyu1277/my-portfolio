@@ -4,31 +4,45 @@ import ProjectRow from "@/components/work/ProjectRow";
 import ContactBand from "@/components/layout/ContactBand";
 import Reveal from "@/components/ui/Reveal";
 import { getFeatured } from "@/lib/content";
+import { getHome } from "@/lib/home";
 import styles from "./page.module.css";
 
+// Wraps the highlighted word in a span so it shows in red.
+function renderHeadline(text: string, highlight: string) {
+  if (!highlight) return text;
+  const i = text.toLowerCase().indexOf(highlight.toLowerCase());
+  if (i === -1) return text;
+  return (
+    <>
+      {text.slice(0, i)}
+      <span>{text.slice(i, i + highlight.length)}</span>
+      {text.slice(i + highlight.length)}
+    </>
+  );
+}
+
 export default async function Home() {
-  const featured = await getFeatured();
+  const [featured, hero] = await Promise.all([getFeatured(), getHome()]);
+
   return (
     <>
       <div className="container">
         <section className={styles.hero} aria-labelledby="hero-heading">
           <div>
-            <p className={styles.eyebrow}>Designer + front-end developer · New York</p>
+            <p className={styles.eyebrow}>{hero.eyebrow}</p>
             <h1 id="hero-heading" className={styles.headline}>
-              Digital design with a <span>reason</span> behind every choice.
+              {renderHeadline(hero.headline, hero.highlight)}
             </h1>
-            <p className={styles.sub}>
-              I design and build websites, storefronts, and the visuals around them.
-            </p>
+            <p className={styles.sub}>{hero.subline}</p>
             <div className={styles.actions}>
-              <Link href="/work" className={styles.primary}>See my work</Link>
-              <Link href="/contact" className={styles.secondary}>Get in touch</Link>
+              <Link href="/work" className={styles.primary}>{hero.primaryLabel}</Link>
+              <Link href="/contact" className={styles.secondary}>{hero.secondaryLabel}</Link>
             </div>
           </div>
           <div className={styles.logoBlock}>
             <Image
               src="/wylogo-transparent.png"
-              alt="WY logo: a handwritten w and y joined by a pencil"
+              alt="WHYDesigns logo: a handwritten w and y joined by a pencil"
               width={848}
               height={750}
               priority

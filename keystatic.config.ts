@@ -97,6 +97,31 @@ export default config({
         }),
       },
     }),
+    homePage: singleton({
+      label: "Home page hero",
+      path: "content/home-page",
+      schema: {
+        eyebrow: fields.text({
+          label: "Small line above the headline",
+          description: "e.g. Designer + front-end developer · New York",
+        }),
+        headline: fields.text({
+          label: "Headline",
+          description: "The large text at the top of the page.",
+        }),
+        highlight: fields.text({
+          label: "Highlighted word",
+          description:
+            "Part of the headline to show in red. It must be spelled exactly as it appears in the headline. Leave empty for no highlight.",
+        }),
+        subline: fields.text({
+          label: "Text under the headline",
+          multiline: true,
+        }),
+        primaryLabel: fields.text({ label: "Main button label", description: "Links to the Work page." }),
+        secondaryLabel: fields.text({ label: "Second button label", description: "Links to the Contact page." }),
+      },
+    }),
   },
 
   collections: {
