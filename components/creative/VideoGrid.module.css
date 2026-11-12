@@ -1,0 +1,116 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12) var(--space-8);
+  margin: 0;
+  padding: 0 10px 10px 0; /* room for the offset shadow */
+  list-style: none;
+}
+
+.tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: 0;
+  background: var(--ink);
+  box-shadow: 10px 10px 0 var(--accent);
+  cursor: pointer;
+  overflow: hidden;
+}
+.poster { object-fit: cover; }
+.noPoster {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: var(--muted);
+  color: var(--white);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  transition: scale var(--duration) var(--ease);
+}
+.tile:hover .playIcon { scale: 1.08; }
+.tile:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+
+.name { margin: var(--space-6) 0 0; font-size: var(--text-lg); font-weight: 700; }
+.meta { margin: 0; color: var(--text-muted); font-size: var(--text-sm); }
+
+/* Player */
+.dialog {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: var(--space-8);
+  border: 0;
+  background: rgba(30, 27, 27, 0.96);
+  color: var(--white);
+}
+.dialog[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dialog::backdrop { background: transparent; }
+.dialog :focus-visible { outline: 3px solid var(--white); outline-offset: 2px; }
+
+.close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  min-height: 44px;
+  padding: 0 var(--space-6);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.close:hover { background: var(--accent-tint); }
+
+.stage { display: flex; flex-direction: column; align-items: center; max-width: 100%; }
+.playerWrap { position: relative; line-height: 0; }
+.player {
+  display: block;
+  height: min(78dvh, 720px);
+  max-width: 92vw;
+  background: #000;
+}
+.soundOff {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-4) var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  background: rgba(30, 27, 27, 0.8);
+  color: var(--white);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  pointer-events: none;
+}
+.playerName { margin: var(--space-4) 0 0; font-size: var(--text-lg); font-weight: 700; }
+.playerHint { margin: 0; color: rgba(255, 255, 255, 0.78); font-size: var(--text-sm); }
+
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+  .dialog { padding: var(--space-4); }
+}
