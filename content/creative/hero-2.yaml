@@ -1,6 +1,7 @@
 title: Site hero 2
 group: hero
-meta: Collection hero
-ratio: "16 / 9"
+meta: Alternate homepage hero image
+ratio: 16 / 9
+image: /images/creative/hero-2/image.png
 published: true
 sortOrder: 2

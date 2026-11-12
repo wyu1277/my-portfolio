@@ -1,6 +1,7 @@
 title: Site hero 1
 group: hero
 meta: Homepage hero
-ratio: "16 / 9"
+ratio: 16 / 9
+image: /images/creative/hero-1/image.jpg
 published: true
 sortOrder: 1

@@ -1,6 +1,8 @@
-title: Video ad 2
+title: How many umbrellas have you replaced
 group: video
-meta: Video ad, captioned
-ratio: "9 / 16"
+meta: Meta video ad, 11 seconds
+ratio: 9 / 16
+video: /videos/video-2/video.mp4
+poster: /images/creative/video-2/poster.png
 published: true
 sortOrder: 2

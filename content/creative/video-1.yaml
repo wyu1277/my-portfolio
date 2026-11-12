@@ -1,6 +1,8 @@
-title: Video ad 1
+title: Introducing the Davek Parasol
 group: video
-meta: Video ad, captioned
-ratio: "9 / 16"
+meta: Meta video ad, 12 seconds
+ratio: 9 / 16
+video: /videos/video-1/video.mp4
+poster: /images/creative/video-1/poster.png
 published: true
 sortOrder: 1
