@@ -1,6 +1,8 @@
-title: Video ad 1
+title: Strong Umbrellas
 group: video
 meta: Video ad, captioned
-ratio: "9 / 16"
+ratio: 1 / 1
+video: /videos/video-1/video.mp4
+poster: /images/creative/video-1/poster.JPG
 published: true
 sortOrder: 1
