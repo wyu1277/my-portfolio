@@ -1,13 +1,13 @@
 title: Accessibility audit and fixes
 byline: Davek Accessories · Development + systems
-summary: Keyboard, screen reader, and focus fixes across three regional
-  storefronts, with a change log and regression checklist. WAVE errors from 20
-  to 0.
+summary: >-
+  Keyboard, screen reader, and focus fixes across three regional storefronts,
+  with a change log and regression checklist. WAVE errors from 20 to 0.
 category: systems
 disciplines:
   - Development
   - Systems
-published: true
+published: false
 wide: false
 sortOrder: 1
 role: Sole owner, from audit to documentation
@@ -24,52 +24,53 @@ briefText: >-
 
   These aren’t edge cases. If you can’t operate a menu, a popup, or a cart with
   a keyboard, you can’t shop the store.
-constraint: Our email signup popups come from Klaviyo and our cart upsell comes
-  from a third-party app, so I couldn’t edit their markup. The fixes had to work
-  from the outside.
-processIntro: ""
+constraint: >-
+  Our email signup popups come from Klaviyo and our cart upsell comes from a
+  third-party app, so I couldn’t edit their markup. The fixes had to work from
+  the outside.
 options: []
-afterReview: ""
 decisions:
   - title: Menus that wait to be opened
-    body: I rewrote the menu script so that tabbing moves through items without
+    body: >-
+      I rewrote the menu script so that tabbing moves through items without
       opening dropdowns. Enter or the Down Arrow opens a submenu, and Escape
       closes it.
-    imageAlt: ""
   - title: Focus that goes where the popup goes
-    body: I wrote JavaScript that detects when each Klaviyo popup and the cart
+    body: >-
+      I wrote JavaScript that detects when each Klaviyo popup and the cart
       dialog appears, moves focus into it, traps focus until it’s closed, closes
       it with Escape, and returns focus to where the user was. I reused the same
       logic across all of them.
-    imageAlt: ""
   - title: Three regional sites, three different bugs
-    body: The Canada popup nested its heading inside a different element, which
+    body: >-
+      The Canada popup nested its heading inside a different element, which
       broke my first selector. The UK site ran a cookie notice through the same
       Klaviyo system, and my script attached itself to the wrong popup until I
       targeted each one by its content.
-    imageAlt: ""
   - title: Images, links, and carousels
-    body: I made product thumbnails announce their real alt text, removed duplicate
+    body: >-
+      I made product thumbnails announce their real alt text, removed duplicate
       tab stops where an image and title both linked to the same product, gave
       unclear links descriptive labels, labeled every dialog, and reworked
       carousel focus handling after finding that Firefox with NVDA behaved
       differently from Chrome.
-    imageAlt: ""
   - title: Written down so the fixes last
-    body: "Theme updates and third-party apps can undo fixes, so I wrote a change
-      log and recovery guide covering each one: the issue, the intended
-      behavior, what I changed, where in the theme to look, and the symptoms if
-      it breaks again. I added a regression checklist to run after every theme
-      update."
-    imageAlt: ""
-componentsIntro: ""
+    body: >-
+      Theme updates and third-party apps can undo fixes, so I wrote a change log
+      and recovery guide covering each one: the issue, the intended behavior,
+      what I changed, where in the theme to look, and the symptoms if it breaks
+      again. I added a regression checklist to run after every theme update.
 components: []
-shippedIntro: ""
-outcomeShipped: WAVE errors dropped from 20 to 0 on [page scanned, date], and
-  the AIM score rose from 5.8 to 7.6 out of 10. All fixes shipped across three
-  regional storefronts in about two weeks. [Add one contrast line after you
-  check the 13 flagged items.] Automated results aren’t the same as full
-  compliance, so I treat manual keyboard and screen reader testing as the real
-  check.
-outcomeDifferently: Automating the regression checklist so it runs on each theme
-  update, and adding JAWS and VoiceOver to my testing.
+gallery: []
+comparisons: []
+outcomeShipped: >-
+  WAVE errors dropped from 20 to 0 on [page scanned, date], and the AIM score
+  rose from 5.8 to 7.6 out of 10. All fixes shipped across three regional
+  storefronts in about two weeks. [Add one contrast line after you check the 13
+  flagged items.] Automated results aren’t the same as full compliance, so I
+  treat manual keyboard and screen reader testing as the real check.
+outcomeDifferently: >-
+  Automating the regression checklist so it runs on each theme update, and
+  adding JAWS and VoiceOver to my testing.
+groups: []
+inPlace: []

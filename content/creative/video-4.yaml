@@ -1,6 +1,8 @@
-title: Video ad 4
+title: One strong umbrella
 group: video
-meta: Video ad, captioned
-ratio: "9 / 16"
+meta: Meta video ad, 17 seconds
+ratio: 9 / 16
+video: /videos/video-4/video.mp4
+poster: /images/creative/video-4/poster.png
 published: true
 sortOrder: 4

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { CSSProperties } from "react";
 import ImageFrame from "@/components/ui/ImageFrame";
+import VideoGrid from "./VideoGrid";
 import ProjectCard from "@/components/work/ProjectCard";
 import type { CreativeItem, Group } from "@/data/creative";
 import type { Project } from "@/data/projects";
@@ -108,6 +109,8 @@ export default function CreativeGallery({
                   <ProjectCard key={p.slug} project={p} />
                 ))}
               </div>
+            ) : s.key === "video" ? (
+              <VideoGrid items={s.items} />
             ) : s.key === "graphic" ? (
               s.items.map((item) => (
                 <article key={item.id} className={styles.feature}>

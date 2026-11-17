@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import CreativePreview from "./CreativePreview";
 import type { Category, Discipline, Project } from "@/data/projects";
 import styles from "./WorkIndex.module.css";
 
-const filters = ["All", "Design", "Development", "Systems", "Campaigns"] as const;
-type Filter = (typeof filters)[number];
+const allFilters = ["All", "Design", "Development", "Systems", "Campaigns"] as const;
+type Filter = (typeof allFilters)[number];
 
 const sections: { category: Category; title: string; sub: string }[] = [
   { category: "design", title: "Product and web design", sub: "Interfaces designed and, where it applies, built." },
@@ -17,6 +16,9 @@ const sections: { category: Category; title: string; sub: string }[] = [
 
 export default function WorkIndex({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState<Filter>("All");
+  const filters = allFilters.filter(
+    (f) => f === "All" || projects.some((p) => p.published && p.disciplines.includes(f as Discipline)),
+  );
 
   const visible = projects.filter(
     (p) => p.published && (filter === "All" || p.disciplines.includes(filter as Discipline)),
@@ -62,7 +64,6 @@ export default function WorkIndex({ projects }: { projects: Project[] }) {
 
       {renderSection(sections[0])}
       {renderSection(sections[1])}
-      {filter === "All" && <CreativePreview />}
       {renderSection(sections[2])}
 
       {visible.length === 0 && (

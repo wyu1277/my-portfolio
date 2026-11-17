@@ -1,6 +1,8 @@
-title: Video ad 3
+title: Just In Case Umbrella
 group: video
-meta: Video ad, captioned
-ratio: "9 / 16"
+meta: Meta video ad, 9 seconds
+ratio: 9 / 16
+video: /videos/video-3/video.mp4
+poster: /images/creative/video-3/poster.png
 published: true
 sortOrder: 3
