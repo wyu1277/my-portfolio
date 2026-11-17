@@ -9,6 +9,7 @@ disciplines:
 published: true
 wide: false
 sortOrder: 2
+thumbnail: /images/projects/shop-the-village/thumbnail.png
 role: Graphic Design Intern
 company: Greenwich Village Chelsea Chamber of Commerce
 timeline: Nov 2021 - Dec 2021
@@ -26,6 +27,8 @@ constraint: >-
 options: []
 decisions: []
 components: []
+gallery: []
+comparisons: []
 groups:
   - title: Kiosk screens
     columns: 1fr 1fr 1fr

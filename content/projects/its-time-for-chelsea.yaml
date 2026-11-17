@@ -1,6 +1,7 @@
 title: It's Time for Chelsea
 byline: Chamber of Commerce · Campaign design
-summary: Instagram posts, Chelsea Market ads, and LinkNYC kiosk ads that ran in
+summary: >-
+  Instagram posts, Chelsea Market ads, and LinkNYC kiosk ads that ran in
   Chelsea, built on the citywide It's Time for NYC brand.
 category: campaigns
 disciplines:
@@ -8,10 +9,12 @@ disciplines:
 published: true
 wide: false
 sortOrder: 1
+thumbnail: /images/projects/its-time-for-chelsea/thumbnail.png
 role: Graphic Design Intern
 company: Greenwich Village Chelsea Chamber of Commerce
-timeline: "[Dates]"
+timeline: '[Dates]'
 tools: Kiosk, market screens, social
+heroImage: /images/projects/its-time-for-chelsea/heroImage.jpg
 briefText: >-
   It's Time for Chelsea was a campaign to bring shoppers to local businesses in
   Chelsea.
@@ -19,48 +22,53 @@ briefText: >-
 
   I designed Instagram posts for individual businesses, ads for the screens at
   Chelsea Market, and ads for LinkNYC kiosks.
-constraint: The campaign was built on the colors and framework of the citywide
-  It's Time for NYC initiative, so the work had to look connected to it.
+constraint: >-
+  The campaign was built on the colors and framework of the citywide It's Time
+  for NYC initiative, so the work had to look connected to it.
+options: []
+decisions: []
+components: []
+gallery: []
+comparisons: []
 groups:
   - title: Kiosk ads and market screens
     columns: 1fr 1fr 2fr
     tiles:
       - name: Kiosk ad
-        caption: "[Format and size]"
+        caption: '[Format and size]'
         ratio: 3 / 4
-        alt: ""
-      - name: Kiosk ad
-        caption: "[Format and size]"
-        ratio: 3 / 4
-        alt: ""
+        image: /images/projects/its-time-for-chelsea/groups/0/tiles/0/image.jpg
       - name: Chelsea Market screen
-        caption: "[Format and size]"
-        ratio: 3 / 2
-        alt: ""
+        caption: '[Format and size]'
+        ratio: 16 / 9
+        image: /images/projects/its-time-for-chelsea/groups/0/tiles/1/image.jpg
+      - name: Chelsea Market screen
+        caption: '[Format and size]'
+        ratio: 16 / 9
+        image: /images/projects/its-time-for-chelsea/groups/0/tiles/2/image.jpg
   - title: Instagram posts
     columns: 1fr 1fr 1fr
     tiles:
       - name: Instagram post
-        caption: "[Business name]"
+        caption: '[Business name]'
         ratio: 1 / 1
-        alt: ""
+        image: /images/projects/its-time-for-chelsea/groups/1/tiles/0/image.png
       - name: Instagram post
-        caption: "[Business name]"
+        caption: '[Business name]'
         ratio: 1 / 1
-        alt: ""
+        image: /images/projects/its-time-for-chelsea/groups/1/tiles/1/image.png
       - name: Instagram post
-        caption: "[Business name]"
+        caption: '[Business name]'
         ratio: 1 / 1
-        alt: ""
+        image: /images/projects/its-time-for-chelsea/groups/1/tiles/2/image.png
 inPlaceNote: Only use photos you took or have permission to use.
 inPlace:
   - name: LinkNYC kiosk
-    caption: "[Where and when]"
+    caption: '[Where and when]'
     ratio: 4 / 3
-    alt: ""
   - name: Chelsea Market
-    caption: "[Where and when]"
+    caption: '[Where and when]'
     ratio: 4 / 3
-    alt: ""
-reflection: "Designing within an existing brand system is its own skill: the
-  work is making many pieces feel consistent across very different formats."
+reflection: >-
+  Designing within an existing brand system is its own skill: the work is making
+  many pieces feel consistent across very different formats.
